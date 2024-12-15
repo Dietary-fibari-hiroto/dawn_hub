@@ -2,9 +2,10 @@ import React from "react";
 import ImagesRoute from "../assets/ImagesRoute"
 
 import Shield from "../components/Shield";
+import Header from "../components/Header";
 
 const shiledValue = [
-    { img: ImagesRoute.NNlog, title: "Nocturnal wanderings", explain: "夜を軽やかに、目に優しく。", link: "" },
+    { img: ImagesRoute.NNlog, title: "Nocturnal wanderings", explain: "夜を軽やかに、目に優しく。", link: "/nn" },
     { img: ImagesRoute.SSlog, title: "Shutter Showcase", explain: "すべての一瞬を、作品に", link: "/test" }
 ]
 
@@ -13,13 +14,9 @@ const HomePage = () => {
         <div className="text-white">
             <div className="triangle-street z-[-1]"></div>
             <section className="palast-variable-italic h-screen w-[100vw] ">
-                <ul className="tracking-[5px] h-[50px] w-full flex justify-between items-center px-[20px]">
-                    <li>Profile</li>
-                    <li>Dawn</li>
-                    <li>Product</li>
-                </ul>
+                <Header />
                 <div className="w-full flex flex-col justify-center items-center overflow-x-hidden" style={{ height: `calc(100vh - 50px)` }}>
-                    <div className=" pl-[150px] text-[20vw] tracking-[200px] oveflow-y-hidden">
+                    <div className="wind-flow pl-[150px] text-[20vw] tracking-[200px] oveflow-y-hidden">
                         DAWN
                     </div>
                     <div className="text-[20px] tracking-[10px] text-shadow-black">Portfolio Of Progress</div>

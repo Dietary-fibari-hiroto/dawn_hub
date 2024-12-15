@@ -8,11 +8,13 @@ import AnimatedRouteSet from "./AnimatedRouteSet"
 
 import HomePage from "../pages/HomePage"
 import Test from "../test/Test"
+import NN from "../pages/NN";
 
 
 const routeList = [
     { path: "/", element: <HomePage /> },
-    { path: "/test", element: <Test /> }
+    { path: "/test", element: <Test /> },
+    { path: "/nn", element: <NN /> },
 ]
 
 const AssemblyRoutes = () => {

@@ -18,7 +18,10 @@ const ScrollEventFlow = (className) => {
 
     //初期実行処理
     useEffect(() => {
-        const element = document.querySelectorAll(".event-Flow")
+        const elements = document.querySelectorAll(".event-Flow")
+        const positionsArray = Array.from(elements).map((element) => {
+            return Math.floor(element.getBoundingClientRect().top)
+        })
     })
 
     useEffect(() => {

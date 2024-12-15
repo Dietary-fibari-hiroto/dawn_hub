@@ -1,0 +1,35 @@
+.triangle-street {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #00000000, #ffffff);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    animation: street-sleepy 6s ease-in-out infinite alternate;
+}
+
+@keyframes street-sleepy {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.5;
+    }
+
+    45% {
+        opacity: 0.7;
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

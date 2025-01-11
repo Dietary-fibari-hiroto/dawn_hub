@@ -4,6 +4,7 @@ import './index.css';
 import './assets/styles/customBackgrounds.css'
 import './assets/styles/fonts.css'
 import './assets/styles/animationsSetting.css'
+import './assets/styles/animateStyles.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

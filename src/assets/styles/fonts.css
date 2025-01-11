@@ -24,3 +24,8 @@
 .text-shadow-black {
     text-shadow: 2px 2px 3px black;
 }
+
+.section-title {
+    border-left: solid white 1px;
+    font-size: 30px;
+}

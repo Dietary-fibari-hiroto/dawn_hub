@@ -6,12 +6,25 @@
 }
 
 .section-frame {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+
+}
+
+.section-padding {
+  padding: 10px 0;
+}
+
+@media (max-width:480px) {
+  .section-frame {
+    min-width: 100lvw;
+    min-height: 100lvh;
+  }
 }
 
 .string-sss {
-  font-size: 10px
+  font-size: 10px;
+
 }
 
 .string-ss {
@@ -28,4 +41,17 @@
 
 .string-lg {
   font-size: 50px
+}
+
+
+.custom-vertical-text {
+  writing-mode: vertical-rl;
+}
+
+.sm-vertical-text {}
+
+@media (max-width: 768px) {
+  .sm-vertical-text {
+    writing-mode: vertical-rl;
+  }
 }

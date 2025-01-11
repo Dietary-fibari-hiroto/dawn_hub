@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import './App.css';
 
 import AssemblyRoutes from "./routes/AssemblyRoutes"
@@ -14,3 +14,5 @@ function App() {
 }
 
 export default App;
+
+

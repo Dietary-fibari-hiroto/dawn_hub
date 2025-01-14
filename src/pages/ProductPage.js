@@ -51,12 +51,13 @@ const ProductPage = () => {
         <div className="kinuta-maruminfuji-stdn w-[100vw]">
             <Header />
             <SubPageStartcard title={"Product"} />
-            <ShieldSection />
+
             <div className="flex-all-center mb-[50px]">
                 {ProductList.map(({ path, img, log, gradient, title, stack, explain }, index) => (
                     <ProductShield key={index} path={path} img={img} gradient={gradient} log={log} title={title} stack={stack} explain={explain} />
                 ))}
             </div>
+            <ShieldSection />
             <Footer />
         </div>
 

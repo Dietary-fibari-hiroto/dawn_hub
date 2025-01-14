@@ -45,7 +45,7 @@ const HomePage = () => {
                 <Header />
                 <div className="w-full flex justify-evenly items-center max-sm:flex-col" style={{ height: `calc(100vh - 50px)` }}>
                     <p className="text-[75px]">DAWN</p>
-                    <figure><img className="h-[150px] w-[150px] wind-flow" src={ImagesRoute.dawn_cat} alt="dawncat" /></figure>
+                    <figure><img className="size-[100px] wind-flow" src={ImagesRoute.dawn_cat} alt="dawncat" /></figure>
                     <div className="tracking-[10px]">
                         <p className="text-[50px]">
                             Hiroto<br />

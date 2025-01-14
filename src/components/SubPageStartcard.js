@@ -7,7 +7,7 @@ const SubPageStartcard = (items) => {
                 <p className="string-lg">{items.title}</p>
                 <p className="tracking-[5px]">Portfolio</p>
             </div>
-            <figure><img className="size-[150px]" src={ImagesRoute.dawn_cat} alt="dawn-cat" /></figure>
+            <figure><img className="size-[100px]" src={ImagesRoute.dawn_cat} alt="dawn-cat" /></figure>
         </div>
     )
 }

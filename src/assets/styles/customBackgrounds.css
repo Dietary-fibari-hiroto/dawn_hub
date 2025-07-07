@@ -1,89 +1,110 @@
 .triangle-street {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, #00000000, #ffffff);
-    clip-path: polygon(0 0, 100% 0, 50% 100%);
-    animation: street-sleepy 6s ease-in-out infinite alternate;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000000, #ffffff);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  animation: street-sleepy 6s ease-in-out infinite alternate;
 }
 
 @keyframes street-sleepy {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    30% {
-        opacity: 0.5;
-    }
+  30% {
+    opacity: 0.5;
+  }
 
-    45% {
-        opacity: 0.7;
-    }
+  45% {
+    opacity: 0.7;
+  }
 
-    60% {
-        opacity: 0.3;
-    }
+  60% {
+    opacity: 0.3;
+  }
 
-    75% {
-        opacity: 1;
-    }
+  75% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 1;
-    }
-
+  100% {
+    opacity: 1;
+  }
 }
 
 .nn-topground {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
-
 .triangle-footer {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: #0D081A;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #0d081a;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
 .appeal-bg {
-    clip-path: polygon(25% 50%, 75% 0, 75% 100%);
+  clip-path: polygon(25% 50%, 75% 0, 75% 100%);
 }
 
-
 .sunny-bg {
-    background: linear-gradient(to bottom, #ffffff, #F9D176);
+  background: linear-gradient(to bottom, #ffffff, #f9d176);
 }
 
 .outfit-bg {
-    background: linear-gradient(to bottom, #C1EDE2, #C1CDED);
+  background: linear-gradient(to bottom, #c1ede2, #c1cded);
+}
+
+.logis-bg {
+  background: linear-gradient(to bottom, #2a9d8f, #dedede);
 }
 
 .bg-shadow {
-    filter: drop-shadow(2px 2px 4px #000000)
+  filter: drop-shadow(2px 2px 4px #000000);
 }
 
 .triangle-gray-bg-top {
-
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    background-color: #313131;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background-color: #313131;
 }
 
 .triangle-gray-bg-bottom {
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-    background-color: #313131;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  background-color: #313131;
 }
 
 @media (max-width: 768px) {
-    .nn-topground {
-        clip-path: none;
-    }
+  .nn-topground {
+    clip-path: none;
+  }
+}
+
+.home-bg {
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #25232b 70%,
+    #672b84 80%,
+    #ffdd8d 100%
+  );
+}
+
+.material-frame {
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    transparent 30%,
+    black 31%
+  );
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  background: black;
 }

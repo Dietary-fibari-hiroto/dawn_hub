@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
+import ImagesRoute from "../assets/ImagesRoute";
 
 const Header = () => {
-    return (
-        <ul className="absolute z-[5] palast-variable-italic tracking-[5px] h-[50px] w-full flex justify-between items-center px-[20px]">
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/">Dawn</Link></li>
-            <li><Link to="/product">Product</Link></li>
-        </ul>
-    )
-}
-
+  return (
+    <div className="absolute z-[10] top-0 flex justify-between  w-full px-[20px] py-[10px]">
+      <Link to="/" className="size-[50px] shootingstar-rightline">
+        <img className="size-[50px]" src={ImagesRoute.dawn_cat} alt="" />
+      </Link>
+      <ul className=" KinutaShinStdN6K tracking-[5px] h-[60px] w-[300px] flex justify-between items-center px-[20px]">
+        <Link className="shootingstar-rightline " to="/profile">
+          Profile
+        </Link>
+        <Link className="shootingstar-rightline " to="/product">
+          Product
+        </Link>
+      </ul>
+    </div>
+  );
+};
 
 export default Header;

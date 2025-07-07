@@ -1,0 +1,199 @@
+src/
+├─ hooks/
+│  └─ useScrollValue.js
+├─ components/
+│  └─ FlutteringCloth.js
+├─ pages/
+│  └─ Test.js
+├─ assets/
+│  └─ ImagesRoute.js
+
+
+
+
+import { useEffect, useState } from "react";
+
+export function useScrollValue(offset = 500, factor = 150) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setValue((window.scrollY - offset) / factor);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [offset, factor]);
+
+  return value;
+}
+
+
+import { useRef, useEffect, useState } from "react";
+import { useThree, useFrame, useLoader } from "@react-three/fiber";
+import * as THREE from "three";
+import { TextureLoader } from "three";
+import { useScrollValue } from "../hooks/useScrollValue";
+import ImagesRoute from "../assets/ImagesRoute";
+
+const animateThreshold = 1;
+
+export default function FlutteringCloth() {
+  const meshRef = useRef();
+  const { camera, size } = useThree();
+  const value = useScrollValue();
+  const [x, setX] = useState(0);
+  const [geometrySize, setGeometrySize] = useState([1, 1]);
+
+  useEffect(() => {
+    setX(value);
+  }, [value]);
+
+  const texture = useLoader(TextureLoader, ImagesRoute.table_5356682_1920);
+
+  useEffect(() => {
+    if (!texture?.image) return;
+
+    const texW = texture.image.width;
+    const texH = texture.image.height;
+    const [planeW, planeH] = geometrySize;
+
+    const texRatio = texW / texH;
+    const planeRatio = planeW / planeH;
+
+    const repeatX = texRatio > planeRatio ? planeRatio / texRatio : 1;
+    const repeatY = texRatio < planeRatio ? texRatio / planeH : 1;
+
+    texture.repeat.set(repeatX, repeatY);
+    texture.offset.set((1 - repeatX) / 2, (1 - repeatY) / 2);
+    texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
+    texture.center.set(0.5, 0);
+    texture.needsUpdate = true;
+  }, [texture, geometrySize]);
+
+  useEffect(() => {
+    const fovRad = (camera.fov * Math.PI) / 180;
+    const height = 2 * Math.tan(fovRad / 2) * camera.position.z;
+    const width = height * (size.width / size.height);
+    setGeometrySize([width, height]);
+  }, [camera, size]);
+
+  useFrame(() => {
+    const mesh = meshRef.current;
+    if (!mesh) return;
+
+    const position = mesh.geometry.attributes.position;
+    const count = position.count;
+
+    for (let i = 0; i < count; i++) {
+      const px = position.getX(i);
+      const py = position.getY(i);
+      const wave =
+        value <= animateThreshold + 1.5
+          ? 0
+          : Math.sin(px * 3 + x * 2) * 0.1 + Math.sin(py * 4 + x * 1.5) * 0.05;
+      position.setZ(i, wave);
+    }
+
+    position.needsUpdate = true;
+    mesh.geometry.computeVertexNormals();
+  });
+
+  return (
+    <mesh ref={meshRef} position={[0, 0, 0]}>
+      <planeGeometry args={[geometrySize[0], geometrySize[1], 80, 80]} />
+      <meshStandardMaterial
+        map={texture}
+        side={THREE.DoubleSide}
+        roughness={0.8}
+      />
+    </mesh>
+  );
+}
+
+
+
+import { useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import FlutteringCloth from "../components/FlutteringCloth";
+import { useScrollValue } from "../hooks/useScrollValue";
+
+const animateThreshold = 1;
+
+export default function Test() {
+  const value = useScrollValue();
+  const [blurAmount, setBlurAmount] = useState(0);
+
+  useEffect(() => {
+    const normalized = value / 10 - 0.3;
+    setBlurAmount(Math.max(0, Math.min(normalized, 0.3)));
+  }, [value]);
+
+  return (
+    <div className="relative h-[400vh] bg-black">
+      <div
+        className="w-[100vw] h-[100vh] sticky top-0 z-1 transition-all duration-300 ease-in-out"
+        style={{ filter: `blur(${blurAmount * (animateThreshold * 80)}px)` }}
+      >
+        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+          <ambientLight intensity={2} />
+          <FlutteringCloth />
+        </Canvas>
+      </div>
+
+      <div
+        className="w-[100vw] h-[100vh] sticky top-0 z-3 bg-black blur-[20px] transition-all duration-300 ease-in-out"
+        style={{ opacity: `${blurAmount - 0.2}` }}
+      ></div>
+
+      <div className="absolute w-[100vw] top-0 z-5">
+        <section className="w-full h-[100vh] flex items-center justify-evenly block">
+          <div className="flex flex-col items-center KinutaShinStdN6K">
+            <p>Patisserie</p>
+            <p className="text-[75px]">DAWN</p>
+          </div>
+          <div className="kinuta-maruminfuji-stdn text-[25px]">
+            <p>
+              世界が静かに切り替わる<br />
+              わたしがわたしに戻る<br />
+              やわらかな空間で。
+            </p>
+          </div>
+        </section>
+
+        <section className="h-screen"></section>
+      </div>
+
+      <section className="w-[100vw] sticky top-0 z-5">
+        <div className="w-full h-[100vh] flex items-center justify-evenly">
+          <div className="flex flex-col items-center KinutaShinStdN6K">
+            <p className="text-[20px]">because you deserve softness.</p>
+          </div>
+          <div className="kinuta-maruminfuji-stdn text-[18px]">
+            <p>
+              心がふっと軽くなる瞬間って、 <br />
+              案外、甘いものの中にある気がする。
+              <br />
+              <br />
+              ひとくち食べて、ふわっと笑顔になる。
+              <br />
+              目を閉じたら、風や光まで思い出せる。
+              <br />
+              <br /> 誰かと分け合っても、
+              <br />
+              ひとりでそっと味わってもいい。
+              <br />
+              <br /> 特別な日も、そうじゃない日も。
+              <br /> その時間が、ちゃんと自分のものだって思えるから。
+              <br />
+              <br />
+              今日のわたしに、ひとつだけご褒美を。
+              <br /> Patisserie DAWMで、
+              <br />
+              ほんの少し、心を甘やかしてみませんか。
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

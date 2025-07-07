@@ -12,10 +12,10 @@
 }
 
 .section-padding {
-  padding: 10px 0;
+  padding: 50px 0;
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .section-frame {
     min-width: 100lvw;
     min-height: 100lvh;
@@ -24,7 +24,6 @@
 
 .string-sss {
   font-size: 10px;
-
 }
 
 .string-ss {
@@ -38,17 +37,48 @@
 .string-rg {
   font-size: 30px;
 }
-
-.string-lg {
-  font-size: 50px
+.string-md {
+  font-size: 40px;
 }
 
+.string-lg {
+  font-size: 50px;
+}
+.string-big {
+  font-size: 70px;
+}
+
+@media (max-width: 1080px) {
+  .string-sss {
+    font-size: 8px;
+  }
+
+  .string-ss {
+    font-size: 13px;
+  }
+
+  .string-sm {
+    font-size: 18px;
+  }
+
+  .string-rg {
+    font-size: 22px;
+  }
+
+  .string-lg {
+    font-size: 35px;
+  }
+  .string-big {
+    font-size: 45px;
+  }
+}
 
 .custom-vertical-text {
   writing-mode: vertical-rl;
 }
 
-.sm-vertical-text {}
+.sm-vertical-text {
+}
 
 @media (max-width: 768px) {
   .sm-vertical-text {

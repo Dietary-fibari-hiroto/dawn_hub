@@ -1,0 +1,43 @@
+.slider-wrapper {
+  position: relative;
+  width: 50px; /* ←細くする */
+  height: 300px; /* ←縦長にする */
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* ←ここで透明にする */
+  z-index: 2;
+  cursor: pointer;
+}
+
+.track {
+  position: relative;
+  width: 8px; /* ←細いバー */
+  height: 100%;
+  background: #333;
+  border-radius: 5px;
+  margin: 0 auto; /* ←中央寄せ */
+}
+
+.thumb {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 30px;
+  background: #4f46e5;
+  transform: translateX(-50%); /* ←中央に持ってくる */
+  transition: bottom 0.2s;
+  z-index: 3;
+}
+.thumb > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 5px;
+  background: #222;
+}

@@ -1,31 +1,64 @@
 .palast-variable {
-    font-family: "palast-variable", sans-serif;
-    font-variation-settings: "opsz" 160, "wght" 500;
+  font-family: palast-variable, sans-serif;
+  font-variation-settings: "opsz" 160, "wght" 500;
 }
 
 .palast-variable-italic {
-    font-family: "palast-variable", sans-serif;
-    font-variation-settings: "opsz" 160, "wght" 500;
-    font-style: italic;
+  font-family: palast-variable, sans-serif;
+  font-variation-settings: "opsz" 160, "wght" 500;
+  font-style: italic;
 }
 
 .kiwi-maru-regular {
-    font-family: "kiwi-maru", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "kiwi-maru", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .kinuta-maruminfuji-stdn {
-    font-family: kinuta-maruminfuji-stdn, serif;
-    font-style: normal;
-    font-weight: 400;
+  font-family: kinuta-maruminfuji-stdn, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.KinutaShinStdN48K {
+  font-family: "kinuta-shin-stdn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.KinutaShinStdN6K {
+  font-family: "kinuta-shin-stdn", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Ryo-Gothic-PlusN-H {
+  font-family: "ryo-gothic-plusn", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .text-shadow-black {
-    text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 3px black;
+}
+.text-light {
+  transition: all 0.3s ease-in-out;
+}
+.text-light:hover {
+  text-shadow: 0 0 15px whitesmoke;
 }
 
 .section-title {
-    border-left: solid white 1px;
-    font-size: 30px;
+  border-left: solid white 1px;
+  font-size: 30px;
+  padding-left: 10px;
+}
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  transform: scale(1, -1);
 }

@@ -1,23 +1,131 @@
 .fadeInBefore {
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 2s ease-out, transform 2s ease-out;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .fadeInAfter {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .opacityBefore {
-    opacity: 0;
-    transition: opacity 2s ease-out;
+  opacity: 0;
+  transition: opacity 2s ease-out;
 }
 
 .opacityAfter {
-    opacity: 1;
+  opacity: 1;
 }
 
 .tracked-element {
-    transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100vw;
+  .inner {
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-flow: column;
+    justify-items: center;
+    animation: scroll 20s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  to {
+    translate: calc(200px * -14);
+  }
+}
+
+.pointer-down {
+  transition: all 0.5s ease-in-out;
+}
+.pointer-down:hover {
+  transform: scale(0.9);
+}
+
+.pointer-up {
+  transition: all 0.3s ease-in-out;
+  overflow-y: hidden;
+}
+.pointer-up:hover {
+  scale: 1.1;
+}
+
+.opacity-down {
+  transition: all 0.3s ease-out;
+}
+.opacity-down:hover {
+  opacity: 0.5;
+}
+
+.topbackscreen-ani {
+  bottom: 5%;
+  animation: brece 30s ease-in-out infinite;
+}
+
+@keyframes brece {
+  0% {
+    bottom: 30%;
+  }
+  20% {
+    bottom: 20%;
+  }
+  40% {
+    bottom: 30%;
+  }
+  70% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 30%;
+  }
+}
+
+.chronodawn-text {
+  opacity: 1;
+  animation: light-brace 5s ease-in-out infinite;
+}
+
+@keyframes light-brace {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*useInOrderAnimation*/
+.in-order-content {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.animateIn-1 {
+  animation: animated1 1s;
+  opacity: 1;
+}
+.animateIn-2 {
+  animation: animated1 3s;
+  opacity: 1;
+}
+
+@keyframes animated1 {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(20px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

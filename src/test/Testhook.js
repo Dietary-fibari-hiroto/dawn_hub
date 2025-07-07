@@ -1,36 +1,71 @@
-import { useEffect } from "react";
-import "../assets/styles/animateStyles.css";
+import { useState, useEffect } from "react";
 
 const Testhook = () => {
-    const animationStyle = "fadeInBefore fadeInDown";
+  const [stars, setStars] = useState([]);
 
-    const handleScroll = () => {
-        const windowHeight = window.innerHeight;
+  useEffect(() => {
+    const addStar = () => {
+      const id = Math.random().toString(36).substr(2, 9);
+      const startX = Math.random() * 100; // 画面のランダムなX位置
+      const startY = Math.random() * 100; // 画面のランダムなY位置
+      const angle = Math.random() * 360; // ランダムな角度（0~360度）
+      const distance = 300; // 移動する距離
 
-        // クラス名で対象要素を取得
-        const sections = document.querySelectorAll(".scroll-section");
+      // 角度に沿った移動量を計算（ラジアンに変換して計算）
+      const radian = (angle * Math.PI) / 180;
+      const deltaX = Math.cos(radian) * distance;
+      const deltaY = Math.sin(radian) * distance;
 
-        sections.forEach((section, index) => {
-            if (section) {
-                const itemHeight = section.getBoundingClientRect().top;
-                if (itemHeight < windowHeight * 0.7) {
-                    section.classList.add("fadeInAfter");
-                    section.setAttribute("data-index", index); // 自動的にインデックスを付与
-                } else {
-                    section.classList.remove("fadeInAfter");
-                }
-            }
-        });
+      setStars((prev) => [
+        ...prev,
+        { id, startX, startY, deltaX, deltaY, angle },
+      ]);
+
+      // 一定時間後に削除
+      setTimeout(() => {
+        setStars((prev) => prev.filter((star) => star.id !== id));
+      }, 2000);
     };
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    const interval = setInterval(addStar, 1000);
 
-    return { animationStyle }; // sectionsRefは不要
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-screen h-screen overflow-hidden">
+      {stars.map(({ id, startX, startY, deltaX, deltaY, angle }) => (
+        <div
+          key={id}
+          className="absolute w-[2px] h-[80px] bg-white opacity-80"
+          style={{
+            top: `${startY}%`,
+            left: `${startX}%`,
+            transform: `rotate(${angle}deg)`,
+            animation: `shooting 1.5s linear forwards`,
+            "--deltaX": `${deltaX}px`,
+            "--deltaY": `${deltaY}px`,
+          }}
+        />
+      ))}
+
+      {/* アニメーションのスタイル */}
+      <style>
+        {`
+          @keyframes shooting {
+            0% {
+              transform: translate(0, 0) rotate(var(--angle)) scale(1);
+              opacity: 1;
+            }
+            100% {
+              transform: translate(var(--deltaX), var(--deltaY)) rotate(var(--angle)) scale(0.5);
+              opacity: 0;
+            }
+          }
+        `}
+      </style>
+    </div>
+  );
 };
 
 export default Testhook;

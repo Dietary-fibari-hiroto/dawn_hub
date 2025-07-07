@@ -1,18 +1,19 @@
-import { HashRouter as Router } from 'react-router-dom';
-import './App.css';
-
-import AssemblyRoutes from "./routes/AssemblyRoutes"
+import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import ScrollReset from "./hooks/ScrollReset";
+import AssemblyRoutes from "./routes/AssemblyRoutes";
 
 function App() {
   return (
-    <Router> {/* この部分でRouterを使っている */}
-      <div className="App">
+    <div>
+      <Router>
+        <Header />
+        <ScrollReset />
         <AssemblyRoutes />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
 export default App;
-
-

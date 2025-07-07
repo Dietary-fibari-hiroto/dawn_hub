@@ -1,11 +1,17 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        ripple: "ripple 1s ease-out forwards",
+      },
+      keyframes: {
+        ripple: {
+          "0%": { transform: "scale(0)", opacity: "0.6" },
+          "100%": { transform: "scale(8)", opacity: "0" },
+        },
+      },
+    },
   },
-  plugins: [],
-}
-
+  plugins: [], // ここが null や undefined になっていないか確認
+};

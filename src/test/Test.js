@@ -1,114 +1,219 @@
-import Shield from "../components/Shield"
+import ImagesRoute from "../assets/ImagesRoute";
+import { useRef, useEffect, useState } from "react";
+import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
+import * as THREE from "three";
 
-import { useState } from "react"
+const animateGrovaluValue = 1;
 
-import ImagesRoute from "../assets/ImagesRoute"
-import { image } from "framer-motion/client"
-import Product from "../components/Product"
-import useScrollAnimation from "../hooks/useScrollAnimation"
+function FlutteringCloth() {
+  const [x, setX] = useState(0);
+  const value = ScrollValue();
+  useEffect(() => {
+    setX((prev) => value);
+  }, [value]);
 
+  /*
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setX((prev) => prev + 0.05);
+    }, 50);
+    return () => clearInterval(interval); // クリーンアップ
+  });
+  */
 
-const Test = () => {
+  const meshRef = useRef();
+  const { camera, size } = useThree();
+  const [geometrySize, setGeometrySize] = useState([1, 1]);
 
+  const texture = useLoader(TextureLoader, ImagesRoute.table_5356682_1920); // public/cloth.jpg に画像があると仮定
+  useEffect(() => {
+    if (!texture || !texture.image) return;
 
-    const { animationStyle } = useScrollAnimation();
+    const texWidth = texture.image.width;
+    const texHeight = texture.image.height;
+    const planeWidth = geometrySize[0];
+    const planeHeight = geometrySize[1];
 
-    const productname = "Shutter Showcase"
+    const texRatio = texWidth / texHeight;
+    const planeRatio = planeWidth / planeHeight;
 
-    const project_detail = {
-        title: productname,
-        title_bar: (<p>Shutter<br />Showcase</p>),
-        bg: "sunny-bg",
-        log: ImagesRoute.SSlog,
-        top_bg: ImagesRoute.manaphoto,
-        project_state: (<a className=" bg-[#777777] px-[10px] py-[5px] rounded-[10px]">制作中...</a>),
-        main_catchcopy: "あなたの写真を簡単にオンライン展示。",
-        subtitle: "すべての一瞬を、作品に。",
-        subimg: ImagesRoute.IMG_2839,
-        width_src: ImagesRoute.IMG_2122,
-        width_explain: (
-            <p className={`scroll-section ${animationStyle} string-ss space-y-[10px]`}>
-                <p className={`scroll-section ${animationStyle}`}>Shutter Showcaseとは、</p>
-                <p className={`scroll-section ${animationStyle}`}>あなたの写真を、簡単にオンラインで展示できるwebアプリです。</p>
-                <p className={`scroll-section ${animationStyle}`}>豊富な写真館(テンプレート)から選んで、</p>
-                <p className={`scroll-section ${animationStyle}`}>自分だけのポートフォリオを簡単に作成できます。</p>
-                <p className={`scroll-section ${animationStyle}`}>作品を美しく公開し、世界中にシェアしよう！</p><br /></p>
-        ),
-        explain2_src: ImagesRoute.scs,
-        explain2_title: "もっと魅せたいを",
-        explain2_text: (<p className="string-ss space-y-[10px]">
-            綺麗に取れたお写真、飾ってみませんか？<br />
-            撮影した写真を、<br />
-            より美しい形で見せたいときに最適です。<br />
-            あなたの作品を引き立てるための、<br />
-            スタイリッシュな展示が簡単に実現できます。<br /></p>),
+    let repeatX = 1,
+      repeatY = 1;
 
-        explain3_bg: ImagesRoute.IMG_5658,
-        appealTagValues: [
-            {
-                position: "top-[15%] -translate-x-1/2", title: "目の負担を軽減", text: (
-                    <div>長時間の画面作業でも目が疲れにくい、<br />
-                        快適な作業環境を提供。<br />
-                        夜間でも安心して作業できます。</div>
-                )
-            }, {
-                position: "top-[30%] -translate-x-[-50%]", title: "幅広い明るさ設定", text: (
-                    <div>OSで設定できる明るさに加え、<br />
-                        さらに自分の好みに合わせて<br />
-                        細かく明るさを調整可能。</div>
-                )
-            }, {
-                position: "top-[45%] -translate-x-1/2", title: "ナイトシフト機能", text: (
-                    <div>目の負担を軽減する暖色化機能を搭載。<br />
-                        夜間の作業時に最適な色温度に調整でき、<br />
-                        自然な感じで作業をサポートします。</div>
-                )
-            }, {
-                position: "top-[60%] -translate-x-[-50%]", title: "マルチディスプレイ対応", text: (
-                    <div>複数のモニターを使用している環境でも、<br />
-                        全てのディスプレイで快適な作業環境を提供。<br />
-                        ディスプレイごとに独立した設定が可能。</div>
-                )
-            }
-        ],
-        stackValue: [
-            { img: ImagesRoute.laravel_icon, name: "Laravel", lang: "php" },
-
-        ],
-        dialog: (
-            <div>
-                <div className="pt-[100px]">
-                    <p className="string-lg">{productname}</p>
-                </div>
-                <div className="text-white leading-relaxed space-y-6">
-                    <p>
-                        シャッターショーケースは、自分の撮影した写真をインターネット上でポートフォリオとして展示できるWebアプリです。
-                        一眼レフでポートレート撮影を趣味とする私自身の経験から、写真を魅力的に「見せる」場がもっと必要だと感じ、このシステムを開発しました。InstagramのようなSNSでは写真をシンプルに共有することが主ですが、シャッターショーケースでは展示会のように写真を飾り、より印象的に公開できます。
-                    </p>
-                    <h2 className="string-rg">主な機能</h2>
-                    <p>
-                        複数の写真をアップロードし、多彩なテンプレートから選択して展示会を作成
-                        展示会をSNSで公開可能
-                        投稿や閲覧機能（最近の投稿、人気の投稿、ランダム表示など）
-                    </p>
-
-                </div>
-                <h2 className="string-rg text-white">技術スタック</h2>
-                <p className="text-white">
-                    フロントエンド: Laravel (HTML, CSS), Tailwind CSS<br />
-                    バックエンド: Laravel (PHP), MySQL<br />
-                    デザイン: Adobe XD<br />
-                    その他:
-                </p>
-            </div>
-        )
-
+    if (texRatio > planeRatio) {
+      // 画像が横長 → Y軸に合わせてXは切れる（cover的）
+      repeatX = planeRatio / texRatio;
+    } else {
+      // 画像が縦長 → X軸に合わせてYは切れる
+      repeatY = texRatio / planeRatio;
     }
 
-    return (
-        <Product productname={productname} project_detail={project_detail} />
-    )
+    texture.repeat.set(repeatX, repeatY);
+
+    texture.offset.set((1 - repeatX) / 2, (1 - repeatY) / 2);
+    texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
+    texture.center.set(0.5, 0); // 中心基準に回転や移動するために設定
+    texture.needsUpdate = true;
+  }, [texture, geometrySize]);
+
+  useEffect(() => {
+    const fov = camera.fov * (Math.PI / 180);
+    const height = 2 * Math.tan(fov / 2.0) * camera.position.z;
+    const width = height * (size.width / size.height);
+    setGeometrySize([width, height]);
+  }, [camera.fov, camera.position.z, size]);
+  /*
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    const mesh = meshRef.current;
+
+    if (mesh) {
+      const position = mesh.geometry.attributes.position;
+      const count = position.count;
+
+      for (let i = 0; i < count; i++) {
+        const x = position.getX(i);
+        const y = position.getY(i);
+        const wave =
+          Math.sin(x * 3 + t * 2) * 0.15 + Math.sin(y * 4 + t * 1.5) * 0.1;
+        position.setZ(i, wave);
+      }
+
+      position.needsUpdate = true;
+      mesh.geometry.computeVertexNormals();
+    }
+  });
+  */
+  useFrame(() => {
+    const mesh = meshRef.current;
+    if (!mesh) return;
+
+    const position = mesh.geometry.attributes.position;
+    const count = position.count;
+
+    for (let i = 0; i < count; i++) {
+      const px = position.getX(i);
+      const py = position.getY(i);
+
+      const wave =
+        value <= animateGrovaluValue + 1.5
+          ? 0
+          : Math.sin(px * 3 + x * 2) * 0.1 + Math.sin(py * 4 + x * 1.5) * 0.05;
+
+      position.setZ(i, wave);
+    }
+
+    position.needsUpdate = true;
+    mesh.geometry.computeVertexNormals();
+  });
+
+  return (
+    <mesh ref={meshRef} position={[0, 0, 0]}>
+      <planeGeometry args={[geometrySize[0], geometrySize[1], 80, 80]} />
+      {texture && (
+        <meshStandardMaterial
+          map={texture}
+          side={THREE.DoubleSide}
+          roughness={0.8}
+        />
+      )}
+    </mesh>
+  );
 }
 
+export function ScrollValue() {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setValue((prev) => (window.scrollY - 500) / 150);
+    };
 
-export default Test
+    window.addEventListener("scroll", handleScroll);
+
+    // クリーンアップ（コンポーネントがアンマウントされたとき）
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  return value;
+}
+
+export default function Test() {
+  const value = ScrollValue();
+  const [a, setA] = useState(0);
+  useEffect(() => {
+    const newValue = value / 10 - 0.3;
+    if (0 <= newValue && newValue <= 0.3) {
+      setA(newValue);
+    } else if (0 >= value) {
+      setA(0);
+    }
+  }, [value]);
+  return (
+    <div className="relative h-[400vh] bg-black">
+      <div
+        className="w-[100vw] h-[100vh] sticky top-0 z-1 transition-all duration-300 ease-in-out"
+        style={{ filter: `blur(${a * (animateGrovaluValue * 80)}px)` }}
+      >
+        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+          <ambientLight intensity={2} />
+          <FlutteringCloth />
+        </Canvas>
+      </div>
+      <div
+        className={`w-[100vw] h-[100vh] transition-all duration-300 ease-in-out sticky top-0 z-3 bg-black blur-[20px]`}
+        style={{ opacity: `${a - 0.2}` }}
+      ></div>
+      <div className="absolute w-[100vw] top-0 z-5">
+        <section className="w-full h-[100vh] flex items-center justify-evenly block">
+          <div className="flex flex-col items-center justify-center KinutaShinStdN6K">
+            <p>Patisserie</p>
+            <p className="text-[75px]">DAWN</p>
+          </div>
+          <div className="kinuta-maruminfuji-stdn text-[25px]">
+            <p>
+              世界が静かに切り替わる
+              <br />
+              わたしがわたしに戻る
+              <br />
+              やわらかな空間で。
+            </p>
+          </div>
+        </section>
+        <section className="h-screen"></section>
+      </div>
+      <section className="w-[100vw] sticky top-0 z-5">
+        <div className="w-full h-[100vh] flex items-center justify-evenly">
+          <div className="flex flex-col items-center justify-center KinutaShinStdN6K">
+            <p className="text-[20px]">because you deserve softness.</p>
+          </div>
+          <div className="kinuta-maruminfuji-stdn text-[18px]">
+            <p>
+              心がふっと軽くなる瞬間って、 <br />
+              案外、甘いものの中にある気がする。
+              <br />
+              <br />
+              ひとくち食べて、ふわっと笑顔になる。
+              <br />
+              目を閉じたら、風や光まで思い出せる。
+              <br />
+              <br /> 誰かと分け合っても、
+              <br />
+              ひとりでそっと味わってもいい。
+              <br />
+              <br /> 特別な日も、そうじゃない日も。
+              <br /> その時間が、ちゃんと自分のものだって思えるから。
+              <br />
+              <br />
+              今日のわたしに、ひとつだけご褒美を。
+              <br /> Patisserie DAWMで、
+              <br />
+              ほんの少し、心を甘やかしてみませんか。
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

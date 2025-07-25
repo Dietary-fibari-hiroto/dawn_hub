@@ -9,10 +9,14 @@ import { Link } from "react-router-dom";
 import TopPageBackScreen from "../components/TopPageBackScreen";
 import ShootingStars from "../hooks/ShootingStarts";
 import LinkButton from "../components/LinkButton";
-import { image } from "framer-motion/client";
+import ScrollLittleFollow from "../hooks/useScrollLittleFollow";
+import { useScrollParallax } from "../hooks/animation/useScrollParallax";
 
 const HomePage = () => {
   const { animationOpacityStyle } = UseOpacityAnimation();
+  useScrollParallax();
+  useScrollParallax(".tracked-element2", 0.1);
+  useScrollParallax(".tracked-element3", 0.3);
 
   return (
     <div className="home-bg KinutaShinStdN48K text-white w-[100vw] overflow-x-hidden">
@@ -42,7 +46,7 @@ const HomePage = () => {
           <p className="shootingstar-underline pl-[40px] string-big flex-all-center tracking-[20px]">
             DAWN
           </p>
-          <p className="tracking-[5cpx]">Portfolio(v1.2.0)</p>
+          <p className="tracking-[5cpx]">Portfolio(v1.2.1)</p>
           <div className="absolute bottom-[10%] right-1/2 translate-x-1/2 flex-all-center space-y-[50px]">
             <div className="scroll-arrow">
               <div className="line"></div>
@@ -61,11 +65,11 @@ const HomePage = () => {
           <p className="string-lg">継続を凌駕する実行力</p>
         </div>
         <img
-          className={`opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] w-[500px] h-[600px] `}
+          className={`tracked-element opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] w-[500px] h-[600px] `}
           src={ImagesRoute.IMG_7041}
         />
         <img
-          className={`opacity-section ${animationOpacityStyle} absolute left-[64%] top-[30%] w-[600px] h-[400px] z-[2]`}
+          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[64%] top-[30%] w-[600px] h-[400px] z-[2]`}
           src={ImagesRoute.IMG_7038}
         />
         <img
@@ -73,10 +77,10 @@ const HomePage = () => {
           src={ImagesRoute.IMG_7018}
         />
         <div
-          className={`opacity-section ${animationOpacityStyle} absolute top-[22%] left-[55%] z-[0] size-[300px] border border-[#6F3AFF]`}
+          className={`tracked-element3 opacity-section ${animationOpacityStyle} absolute top-[22%] left-[55%] z-[0] size-[300px] border border-[#6F3AFF]`}
         />
         <div
-          className={`opacity-section ${animationOpacityStyle} absolute top-[52%] left-[5%] z-[0] size-[300px] border border-[#6F3AFF]`}
+          className={`tracked-element3 opacity-section ${animationOpacityStyle} absolute top-[52%] left-[5%] z-[0] size-[300px] border border-[#6F3AFF]`}
         />
         <div
           className={`opacity-section ${animationOpacityStyle} absolute top-[88%] right-[10%] z-[0] size-[300px] border border-[#6F3AFF]`}
@@ -107,11 +111,11 @@ const HomePage = () => {
           <br />
         </p>
         <img
-          className={`opacity-section ${animationOpacityStyle} absolute w-[500px] h-[600px] left-[8%] top-[57%]`}
+          className={`tracked-element opacity-section ${animationOpacityStyle} absolute w-[500px] h-[600px] left-[8%] top-[57%]`}
           src={ImagesRoute.IMG_152}
         />
         <img
-          className={`opacity-section ${animationOpacityStyle} absolute left-[27%] top-[72%] z-[3] w-[500px] h-[600px]`}
+          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[27%] top-[72%] z-[3] w-[500px] h-[600px]`}
           src={ImagesRoute.IMG_7017}
         />
         <p

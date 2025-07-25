@@ -1,88 +1,82 @@
 .wind-blows {
-    animation: blows 20s infinite alternate;
+  animation: blows 20s infinite alternate;
 }
 
 @keyframes blows {
-    0% {
-        transform: translate(-5%, -5%);
-    }
+  0% {
+    transform: translate(-5%, -5%);
+  }
 
-    20% {
-        transform: translate(-5%, 5%);
-    }
+  20% {
+    transform: translate(-5%, 5%);
+  }
 
-    40% {
-        transform: translate(5%, 5%);
-    }
+  40% {
+    transform: translate(5%, 5%);
+  }
 
-    60% {
-        transform: translate(5%, -5%);
-    }
+  60% {
+    transform: translate(5%, -5%);
+  }
 
-    80% {
-        transform: translate(0, 0);
-    }
+  80% {
+    transform: translate(0, 0);
+  }
 
-    100% {
-        transform: translate(-5%, -5%);
-    }
+  100% {
+    transform: translate(-5%, -5%);
+  }
 }
 
 .wind-flow {
-    animation: flow 10s ease-in-out infinite alternate;
-
+  animation: flow 10s ease-in-out infinite alternate;
 }
 
 @keyframes flow {
+  0%,
+  40%,
+  80% {
+    transform: translateY(5%);
+  }
 
-    0%,
-    40%,
-    80% {
-        transform: translateY(5%);
-    }
-
-    20%,
-    60%,
-    100% {
-        transform: translateY(-2%);
-    }
+  20%,
+  60%,
+  100% {
+    transform: translateY(-2%);
+  }
 }
-
 
 .text-shadow-po {
-    transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-
 .text-shadow-po::after {
-    content: "Technology stack";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-shadow:
-        2px 2px 4px #490049;
+  content: "Technology stack";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-shadow: 2px 2px 4px #490049;
 
-
-    z-index: -1;
-    filter: blur(3px);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, ;
+  z-index: -1;
+  filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .text-shadow-po:hover {
-    color: #0D081A;
+  color: #0d081a;
 }
 
 .text-shadow-po:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .brush-hover {
-    transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .brush-hover:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }

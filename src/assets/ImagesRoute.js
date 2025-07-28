@@ -114,6 +114,25 @@ const ImagesRoute = {
   IMG_7052: require("./images/IMG_7052.jpg"),
   IMG_7053: require("./images/IMG_7053.jpg"),
   IMG_7028: require("./images/IMG_7028.jpg"),
+
+  p20240705_Manami_Sorami_152: require("./images/photos/20240705_Manami_Sorami-152.jpg"),
+  IMG_7061: require("./images/photos/IMG_7061.jpg"),
+  IMG_7062: require("./images/photos/IMG_7062.jpg"),
+  IMG_7063: require("./images/photos/IMG_7063.jpg"),
+  IMG_7064: require("./images/photos/IMG_7064.jpg"),
+  IMG_7065: require("./images/photos/IMG_7065.jpg"),
+  IMG_7066: require("./images/photos/IMG_7066.jpg"),
+  IMG_7067: require("./images/photos/IMG_7067.jpg"),
+  IMG_7068: require("./images/photos/IMG_7068.jpg"),
+  IMG_7069: require("./images/photos/IMG_7069.jpg"),
+
+  logo_winui: require("./images/photos/logo-winui.png"),
+  MAUI: require("./images/photos/MAUI.png"),
+  under_line: require("./images/photos/under_line.png"),
+  under_write: require("./images/photos/under_write.png"),
+  write: require("./images/photos/write.png"),
+  write_logo: require("./images/photos/write_logo.png"),
+  ss: require("./images/photos/ss.png"),
 };
 
 export default ImagesRoute;

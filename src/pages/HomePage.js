@@ -46,7 +46,7 @@ const HomePage = () => {
           <p className="shootingstar-underline pl-[40px] string-big flex-all-center tracking-[20px]">
             DAWN
           </p>
-          <p className="tracking-[5cpx]">Portfolio(v1.2.1)</p>
+          <p className="tracking-[5cpx]">Portfolio(v1.3.1)</p>
           <div className="absolute bottom-[10%] right-1/2 translate-x-1/2 flex-all-center space-y-[50px]">
             <div className="scroll-arrow">
               <div className="line"></div>

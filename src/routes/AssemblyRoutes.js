@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 import AnimatedRouteSet from "./AnimatedRouteSet";
 import LoadingScreen from "../pages/LoadingScreen";
+import ProductionRoutes from "./ProductionRoutes";
 
 import HomePage from "../pages/HomePage";
 import NotFound from "../pages/404";
@@ -61,6 +62,7 @@ const AssemblyRoutes = () => {
               element={<AnimatedRouteSet>{element}</AnimatedRouteSet>}
             />
           ))}
+          <Route path="/production/*" element={<ProductionRoutes />} />
         </Routes>
       )}
     </AnimatePresence>

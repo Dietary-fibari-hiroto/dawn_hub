@@ -25,10 +25,7 @@ code {
 img {
   object-fit: cover;
 }
-a:hover,
-button:hover {
-  cursor: none !important;
-}
+
 p {
   transition: all 0.2s ease-out;
 }

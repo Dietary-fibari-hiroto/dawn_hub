@@ -66,4 +66,20 @@ export const ProductData = [
     explain:
       "``シック``で``モダン``なオリジナルのデジタル時計。シンプルで優しい雰囲気があなたの作業をお供します。是非‘‘F11‘‘キー（フルスクリーンモード）でお楽しみください",
   },
+  {
+    path: "/production/write",
+    img: ImagesRoute.IMG_7065,
+    log: ImagesRoute.write_logo,
+    gradient: "from-[#000000] to-[#545454]",
+    title: "Write",
+    subtitle: "デジタル時計",
+    stack: "windowsソフト ＆ クロスプラットフォームアプリ",
+    explain: `DAWN-Writeはあなたの気分に寄り添う「着せ替えメモソフト」です。
+                      無機質なテキストだけでは物足りない。
+                  その時の気分に合ったテーマを選んで、
+                  ふとした時に気持ちよくメモできる空間を作りましょう。
+
+    
+    `,
+  },
 ];

@@ -33,6 +33,9 @@
 .string-sm {
   font-size: 20px;
 }
+.string-m {
+  font-size: 25px;
+}
 
 .string-rg {
   font-size: 30px;
@@ -46,6 +49,9 @@
 }
 .string-big {
   font-size: 70px;
+}
+.string-hundred {
+  font-size: 100px;
 }
 
 @media (max-width: 1080px) {

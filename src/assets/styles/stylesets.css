@@ -149,3 +149,8 @@
 .shootingstar-rightline:hover::after {
   top: 100%;
 }
+
+.text-support-line-l {
+  border-left: solid 1px #6f3aff;
+  padding-left: 15px;
+}

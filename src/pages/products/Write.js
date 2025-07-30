@@ -83,20 +83,20 @@ const Write = () => {
             <div className="w-screen flex items-center justify-evenly">
               <div className="space-y-[50px]">
                 <div className="space-y-[10px]">
-                  <p className="string-rg">着せ替えテーマ</p>
+                  <p className="string-rg">どこに保存されたか、迷わない</p>
                   <p className="string-sm ml-[50px]">
-                    朝焼けのようなグラデーション、落ち着いた夜のモード、集中できるミニマルな配色。
+                    Adobe風の仮想ディレクトリで、メモの整理も快適。
                     <br />
-                    自分の気分や時間帯に合わせて、自由に切り替えられます。
+                    1つのアプリの中で完結するから、ファイルの行方がわからなくなることもありません。
                   </p>
                   <img className="w-[650px]" src={ImagesRoute.under_line} />
                 </div>
                 <div className="space-y-[10px]">
-                  <p className="string-rg">手軽さはそのままに</p>
+                  <p className="string-rg">起動も、軽やかに</p>
                   <p className="string-sm ml-[50px]">
-                    とにかく今、書きたいことを自由に書けるように、
+                    タイトル画面の有無を選べるから、起動してすぐ書き始めたい人にも最適。
                     <br />
-                    保存時にタイトルをつける形式を採用。
+                    Windows環境では、ネイティブ技術を活かしてサクサク動作。
                   </p>
                   <img className="w-[650px]" src={ImagesRoute.under_line} />
                 </div>

@@ -78,8 +78,16 @@ export const ProductData = [
                       無機質なテキストだけでは物足りない。
                   その時の気分に合ったテーマを選んで、
                   ふとした時に気持ちよくメモできる空間を作りましょう。
-
-    
     `,
+  },
+  {
+    path: "/material/dawn-wander",
+    img: ImagesRoute.IMG_7033,
+    log: ImagesRoute.table_5356682_1920,
+    gradient: "from-[#000000] to-[#545454]",
+    title: "Dawn-wander発表資料",
+    ubtitle: "UX変化分析アプリ",
+    stack: "発表資料",
+    explain: "",
   },
 ];

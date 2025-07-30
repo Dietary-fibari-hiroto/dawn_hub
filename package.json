@@ -8,6 +8,7 @@
     "@react-three/fiber": "^9.1.2",
     "cra-template": "1.2.0",
     "framer-motion": "^11.14.0",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.2",

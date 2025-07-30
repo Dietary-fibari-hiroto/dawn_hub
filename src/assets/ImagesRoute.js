@@ -126,6 +126,9 @@ const ImagesRoute = {
   IMG_7068: require("./images/photos/IMG_7068.jpg"),
   IMG_7069: require("./images/photos/IMG_7069.jpg"),
 
+  material_web: require("./images/materials/material_web.png"),
+  material_spa: require("./images/materials/material_spa.png"),
+
   logo_winui: require("./images/photos/logo-winui.png"),
   MAUI: require("./images/photos/MAUI.png"),
   under_line: require("./images/photos/under_line.png"),
@@ -133,6 +136,25 @@ const ImagesRoute = {
   write: require("./images/photos/write.png"),
   write_logo: require("./images/photos/write_logo.png"),
   ss: require("./images/photos/ss.png"),
+  dawn_wander_tec: require("./images/photos/dawn_wander_tec.png"),
+
+  framer_motion: require("./images/icons/framer-motion.png"),
+
+  table_5356682_1920: require("./images/materials/table-5356682_1920.jpg"),
+  p464739458_416156958199650_3162208171733525292_n: require("./images/materials/464739458_416156958199650_3162208171733525292_n.jpg"),
+  IMG_2855: require("./images/materials/IMG_2855.jpg"),
+
+  dining_table_7782610_1920: require("./images/materials/dining-table-7782610_1920.jpg"),
+  t_ed_hOgog7l_iuY_unsplash: require("./images/materials/t-ed-hOgog7l-iuY-unsplash.jpg"),
+  hermes_rivera_aK6WGqxyHFw_unsplash: require("./images/materials/hermes-rivera-aK6WGqxyHFw-unsplash.jpg"),
+
+  p465189818_3939773542908699_8873408741192309513_n: require("./images/materials/465189818_3939773542908699_8873408741192309513_n.jpg"),
+  p465523955_568969585623225_5011903062634586769_n: require("./images/materials/465523955_568969585623225_5011903062634586769_n.jpg"),
+  p465072607_1461049087899559_588075790240556776_n: require("./images/materials/465072607_1461049087899559_588075790240556776_n.jpg"),
+
+  IMG_2882: require("./images/materials/IMG_2882.jpg"),
+  IMG_8332: require("./images/materials/IMG_8332.png"),
+  IMG_7856: require("./images/materials/IMG_7856.png"),
 };
 
 export default ImagesRoute;

@@ -19,6 +19,7 @@ import Logis from "../pages/Logis";
 import HookView from "../pages/HookView";
 import ChronoDawn from "../pages/functions/Chronodawn";
 import ReserchMa from "../pages/materials/ResearchMa";
+import Dawn_wander from "../pages/materials/Dawn_wander";
 
 const routeList = [
   { path: "/", element: <HomePage /> },
@@ -36,6 +37,8 @@ const routeList = [
   { path: "/hook/hookview", element: <HookView /> },
 
   { path: "/material/researchma", element: <ReserchMa /> },
+
+  { path: "/material/dawn-wander", element: <Dawn_wander /> },
 ];
 
 const AssemblyRoutes = () => {

@@ -20,12 +20,14 @@ import HookView from "../pages/HookView";
 import ChronoDawn from "../pages/functions/Chronodawn";
 import ReserchMa from "../pages/materials/ResearchMa";
 import Dawn_wander from "../pages/materials/Dawn_wander";
+import ResponsiveAlert from "../pages/ResponsiveAlert";
 
 const routeList = [
   { path: "/", element: <HomePage /> },
   { path: "*", element: <NotFound /> },
   { path: "/profile", element: <Profile /> },
   { path: "/product", element: <ProductPage /> },
+  { path: "/responsivealert", element: <ResponsiveAlert /> },
   { path: "/test", element: <Test /> },
   { path: "/product/nn", element: <NN /> },
   { path: "/product/ss", element: <SS /> },

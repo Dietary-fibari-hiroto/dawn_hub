@@ -23,62 +23,183 @@
 }
 
 .string-sss {
-  font-size: 10px;
-}
-
+  font-size: 8px;
+} /* 元: 10px */
 .string-ss {
-  font-size: 15px;
-}
-
+  font-size: 12px;
+} /* 元: 15px */
 .string-sm {
-  font-size: 20px;
-}
+  font-size: 12px;
+} /* 元: 20px */
 .string-m {
-  font-size: 25px;
-}
-
+  font-size: 20px;
+} /* 元: 25px */
 .string-rg {
-  font-size: 30px;
-}
+  font-size: 24px;
+} /* 元: 30px */
 .string-md {
-  font-size: 40px;
-}
-
+  font-size: 32px;
+} /* 元: 40px */
 .string-lg {
-  font-size: 50px;
-}
+  font-size: 40px;
+} /* 元: 50px */
 .string-big {
-  font-size: 70px;
-}
+  font-size: 60px;
+} /* 元: 70px */
 .string-big-plus {
-  font-size: 85px;
-}
+  font-size: 70px;
+} /* 元: 85px */
 .string-hundred {
-  font-size: 100px;
+  font-size: 85px;
+} /* 元: 100px */
+@media (min-width: 1440px) {
+  .string-sss {
+    font-size: 10px;
+  }
+  .string-ss {
+    font-size: 15px;
+  }
+  .string-sm {
+    font-size: 20px;
+  }
+  .string-m {
+    font-size: 25px;
+  }
+  .string-rg {
+    font-size: 30px;
+  }
+  .string-md {
+    font-size: 40px;
+  }
+  .string-lg {
+    font-size: 50px;
+  }
+  .string-big {
+    font-size: 70px;
+  }
+  .string-big-plus {
+    font-size: 85px;
+  }
+  .string-hundred {
+    font-size: 100px;
+  }
 }
-
 @media (max-width: 1080px) {
   .string-sss {
     font-size: 8px;
   }
+  .string-ss {
+    font-size: 12px;
+  }
+  .string-sm {
+    font-size: 16px;
+  }
+  .string-m {
+    font-size: 20px;
+  }
+  .string-rg {
+    font-size: 24px;
+  }
+  .string-md {
+    font-size: 30px;
+  }
+  .string-lg {
+    font-size: 36px;
+  }
+  .string-big {
+    font-size: 45px;
+  }
+  .string-big-plus {
+    font-size: 55px;
+  }
+  .string-hundred {
+    font-size: 65px;
+  }
+}
+
+/* スマホサイズ向け（〜600px） */
+@media (max-width: 600px) {
+  .string-sss {
+    font-size: 6px;
+  }
 
   .string-ss {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .string-sm {
+    font-size: 14px;
+  }
+
+  .string-m {
     font-size: 18px;
   }
 
   .string-rg {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .string-md {
+    font-size: 28px;
   }
 
   .string-lg {
-    font-size: 35px;
+    font-size: 30px;
   }
+
   .string-big {
-    font-size: 45px;
+    font-size: 36px;
+  }
+
+  .string-big-plus {
+    font-size: 42px;
+  }
+
+  .string-hundred {
+    font-size: 50px;
+  }
+}
+
+/* タブレット向け（〜768px） */
+@media (max-width: 768px) {
+  .string-sss {
+    font-size: 7px;
+  }
+
+  .string-ss {
+    font-size: 11px;
+  }
+
+  .string-sm {
+    font-size: 16px;
+  }
+
+  .string-m {
+    font-size: 20px;
+  }
+
+  .string-rg {
+    font-size: 24px;
+  }
+
+  .string-md {
+    font-size: 32px;
+  }
+
+  .string-lg {
+    font-size: 38px;
+  }
+
+  .string-big {
+    font-size: 44px;
+  }
+
+  .string-big-plus {
+    font-size: 55px;
+  }
+
+  .string-hundred {
+    font-size: 65px;
   }
 }
 

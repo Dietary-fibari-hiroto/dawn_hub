@@ -13,7 +13,7 @@ import useInElementScrollAnimation from "../../hooks/event/useInElementScrollAni
 
 const SectionTitle = (props) => {
   return (
-    <div className={`p-[100px] ${props.className}`}>
+    <div className={`p-[5vw] ${props.className}`}>
       <div className="flex items-center justify-start tracking-[3px]">
         <p className="string-md">{props.index}</p>
         <div className="space-y-[-10px] flex items-start justify-center flex-col">
@@ -84,6 +84,7 @@ const sintilyokuOb = [
 
 const Dawn_wander = () => {
   const step = useInElementScrollAnimation("my-target");
+  const [showDialog, setShowDialog] = useState(false);
 
   useEffect(() => {
     console.log(step);
@@ -107,8 +108,43 @@ const Dawn_wander = () => {
 
     return () => clearInterval(interval);
   }, []);
+  const openUrl = (url) => {
+    if (typeof window.open === "function") {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      console.error("window.open is not a function!");
+    }
+  };
+
   return (
     <div className="kinuta-maruminfuji-stdn bg-black">
+      {showDialog && (
+        <motion.div
+          onClick={() => {
+            setShowDialog((prev) => !prev);
+          }}
+          className="sticky top-0 left-0 z-[50] bg-black section-frame flex items-center justify-evenly"
+        >
+          <figure className="flex-all-center space-y-[100px]">
+            <img className="w-[800px]" src={ImagesRoute.guid} />
+            <img className="w-[800px]" src={ImagesRoute.guid2} />
+          </figure>
+          <div className="space-y-[100px]">
+            <p className="string-sm">
+              Windowsの場合
+              <br />
+              ブラウザの拡大/縮小が100%なのをご確認の上
+              <br />
+              設定→システム→ディスプレイ
+              <br />
+              のタブにある「拡大/縮小」を100%~150%に変更してください。
+              <br />
+              *本サイトはレスポンシブ未対応です。
+            </p>
+            <p>---資料へ戻る場合は画面をクリックしてください。---</p>
+          </div>
+        </motion.div>
+      )}
       <section className="relative section-frame">
         {" "}
         <video
@@ -155,17 +191,19 @@ const Dawn_wander = () => {
         </div>
         <div className="string-sm text-center absolute bottom-[5%] left-1/2 translate-x-[-50%] z-[5]">
           <p className="string-sm">SK3A 小野寺広登</p>
-
+          <p className="string-ss">内山、吉原ゼミ</p>
           <p className="string-ss">前期最終発表プレゼン資料</p>
         </div>
-        <button className="string-sm absolute bottom-[5%] left-[5%] bg-[#555555] w-[350px] h-[50px] z-[5]">
+        <button
+          onClick={() => {
+            setShowDialog((prev) => !prev);
+          }}
+          className="string-sm absolute bottom-[5%] left-[5%] bg-[#555555] w-[350px] h-[50px] z-[5]"
+        >
           資料UIが崩れている方はこちら
         </button>
       </section>
       <section className="relative w-screen h-[200lvh]">
-        <div className="sticky top-0 section-frame z-[8] flex items-end">
-          <div className="h-[200px] w-screen bg-black" />
-        </div>
         <SectionTitle
           className="absolute top-0 left-0"
           index="00"
@@ -259,19 +297,19 @@ const Dawn_wander = () => {
         />
         <img
           src={ImagesRoute.IMG_7050}
-          className="tracked-element w-[300px] h-[200px] absolute left-[63%] top-[15%] z-[10]"
+          className="tracked-element w-[300px] h-[200px] absolute left-[63%] top-[15%] z-[5]"
         />
         <img
           src={ImagesRoute.IMG_7034}
-          className="tracked-element3 w-[300px] h-[200px] absolute left-[15%] top-[33%] z-[10]"
+          className="tracked-element3 w-[300px] h-[200px] absolute left-[15%] top-[33%] z-[5]"
         />
         <img
           src={ImagesRoute.IMG_7065}
-          className="tracked-element2 w-[200px] h-[300px] absolute left-[35%] top-[45%] z-[10]"
+          className="tracked-element2 w-[200px] h-[300px] absolute left-[35%] top-[45%] z-[5]"
         />
         <img
           src={ImagesRoute.IMG_7068}
-          className="tracked-element w-[200px] h-[300px] absolute left-[58%] top-[68%] z-[10]"
+          className="tracked-element w-[200px] h-[300px] absolute left-[58%] top-[68%] z-[5]"
         />
       </section>
       <section className="section-frame flex-all-center relative">
@@ -282,15 +320,15 @@ const Dawn_wander = () => {
           english="Research Theme"
         />
         <div className="w-full flex-all-center flex-col string-lg">
-          <p className="mr-[300px]">
+          <p className="pr-[300px]">
             <span className="string-big text-[#9B74FF]">”動き”</span>が与える
           </p>
-          <p className="ml-[300px]">ユーザーの影響と視線誘導</p>
+          <p className="pl-[300px]">ユーザーの影響と視線誘導</p>
         </div>
       </section>
-      <section className="section-frame flex-all-center flex-col  space-y-[100px] ">
-        <div className="w-screen flex justify-start px-[300px]">
-          <div className="pl-[100px] space-y-[10px]">
+      <section className="w-full flex-all-center flex-col  space-y-[100px] ">
+        <div className="w-screen flex justify-start px-[10vw]">
+          <div className="space-y-[10px]">
             <p className="string-lg">・目的...</p>
             <p className="text-support-line-l string-sm leading-[30px]">
               現代のWebサイトでは、アニメーションがUX（ユーザー体験）
@@ -308,7 +346,7 @@ const Dawn_wander = () => {
           </div>
         </div>
         <div className="w-screen flex justify-end px-[300px]">
-          <div className="pr-[100px] space-y-[10px]">
+          <div className=" space-y-[10px]">
             <p className="string-lg">・実験方法...</p>
             <p className="text-support-line-l string-sm leading-[30px]">
               実験形式のWebページ合計6種類を用いて
@@ -320,53 +358,50 @@ const Dawn_wander = () => {
           </div>
         </div>
       </section>
-      <section className="w-screen h-[200lvh] relative">
+      <section className="w-screen flex-all-center py-[100px]">
         <p className="string-lg w-full text-center">・進捗...</p>{" "}
-        <div className="flex flex-col items-center justify-center absolute z-[3]  top-[10%] left-[30%]">
-          {sintilyokuOb.map(({ state, title }, index) => {
-            const isLast = index === sintilyokuOb.length - 1;
-            const color = state ? "#9B74FF" : "#FF7474";
-            const mark = state ? "✓" : "×";
+        <div className="flex justify-center items-start">
+          <div className="flex flex-col items-center justify-center">
+            {sintilyokuOb.map(({ state, title }, index) => {
+              const isLast = index === sintilyokuOb.length - 1;
+              const color = state ? "#9B74FF" : "#FF7474";
+              const mark = state ? "✓" : "×";
 
-            return (
-              <div key={title} className="flex-all-center flex-col">
-                <div
-                  className="size-[50px] rounded-full flex-all-center string-m"
-                  style={{ backgroundColor: color }}
-                >
-                  {mark}
-                </div>
-                {/* 最後の要素には線を描画しない */}
-                {!isLast && (
+              return (
+                <div key={title} className="flex-all-center flex-col">
                   <div
-                    className="w-[1px] h-[120px]"
+                    className="size-[50px] rounded-full flex-all-center string-m"
                     style={{ backgroundColor: color }}
-                  />
-                )}
+                  >
+                    {mark}
+                  </div>
+                  {/* 最後の要素には線を描画しない */}
+                  {!isLast && (
+                    <div
+                      className="w-[1px] h-[120px]"
+                      style={{ backgroundColor: color }}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div className="space-y-[120px]">
+            {sintilyokuOb.map(({ title, explain }, index) => (
+              <div
+                key={index}
+                className="flex justify-start items-center space-x-[30px]"
+              >
+                <p className="h-[50px] string-md">・・・{title}</p>
+                <p>{explain}</p>
               </div>
-            );
-          })}
-        </div>
-        <div className="space-y-[120px] absolute top-[10%] right-[25%] z-[10]">
-          {sintilyokuOb.map(({ title, explain }, index) => (
-            <div
-              key={index}
-              className="flex justify-start items-center space-x-[30px]"
-            >
-              <p className="h-[50px] string-md">・・・{title}</p>
-              <p>{explain}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
-      <section className="section-frame relative">
-        <SectionTitle
-          className="absolute top-0 left-0 z-[3]"
-          index="02"
-          title="技術スタック"
-          english="Tech Stack"
-        />
-        <img className="section-frame" src={ImagesRoute.dawn_wander_tec} />
+      <section>
+        <SectionTitle index="02" title="技術スタック" english="Tech Stack" />
+        <img className="w-full" src={ImagesRoute.dawn_wander_tec} />
       </section>
       <section className="section-frame flex flex-col justify-evenly">
         <div className="flex items-center justify-evenly w-full">
@@ -567,9 +602,9 @@ const Dawn_wander = () => {
           </div>
         </div>
       </section>
-      <section className="w-screen h-[150lvh] flex-all-center relative">
+      <section className="w-screen  flex-all-center relative">
         <SectionTitle
-          className="absolute top-0 left-0 z-[3]"
+          className="w-full"
           index="04"
           title="SPAとFramer-motion"
           english="SPA & Framer Motion"
@@ -695,32 +730,32 @@ const Dawn_wander = () => {
             </div>
           </section>
         </div>
-        <div className="absolute top-0 left-0 z-[12] h-[600vh] w-screen">
+        <div className="absolute top-0 left-0 z-[8] h-[600vh] w-screen">
           <section className="w-screen h-[200lvh] relative">
             <img
-              className="w-[350px] h-[500px] absolute top-[10%] right-[40%]"
+              className="tracked-element3 img-custom-box-vertical absolute top-[10%] right-[40%]"
               src={ImagesRoute.dining_table_7782610_1920}
             />
             <img
-              className="w-[500px] h-[350px] absolute top-[40%] right-[5%]"
+              className="tracked-element img-custom-box-horizontal absolute top-[40%] right-[5%]"
               src={ImagesRoute.hermes_rivera_aK6WGqxyHFw_unsplash}
             />
             <img
-              className="w-[500px] h-[350px] absolute bottom-[10%] right-[20%]"
+              className="tracked-element2 img-custom-box-horizontal absolute bottom-[10%] right-[20%]"
               src={ImagesRoute.t_ed_hOgog7l_iuY_unsplash}
             />
           </section>
           <section className="w-screen h-[200lvh] relative">
             <img
-              className="w-[350px] h-[500px] absolute top-[10%] right-[10%]"
+              className="tracked-element3 img-custom-box-vertical absolute top-[10%] right-[10%]"
               src={ImagesRoute.p465072607_1461049087899559_588075790240556776_n}
             />
             <img
-              className="w-[500px] h-[350px] absolute top-[40%] right-[35%]"
+              className="tracked-element img-custom-box-horizontal absolute top-[40%] right-[35%]"
               src={ImagesRoute.p465523955_568969585623225_5011903062634586769_n}
             />
             <img
-              className="w-[500px] h-[350px] absolute bottom-[10%] right-[20%]"
+              className="tracked-element2 img-custom-box-horizontal absolute bottom-[10%] right-[20%]"
               src={
                 ImagesRoute.p465189818_3939773542908699_8873408741192309513_n
               }
@@ -728,15 +763,15 @@ const Dawn_wander = () => {
           </section>
           <section className="w-screen h-[200lvh] relative">
             <img
-              className="w-[350px] h-[500px] absolute top-[10%] right-[40%]"
+              className="tracked-element3 img-custom-box-vertical absolute top-[10%] right-[40%]"
               src={ImagesRoute.IMG_2882}
             />
             <img
-              className="w-[500px] h-[350px] absolute top-[40%] right-[5%]"
+              className="tracked-element img-custom-box-horizontal absolute top-[40%] right-[5%]"
               src={ImagesRoute.IMG_8332}
             />
             <img
-              className="w-[500px] h-[350px] absolute bottom-[10%] right-[20%]"
+              className="tracked-element2 img-custom-box-horizontal absolute bottom-[10%] right-[20%]"
               src={ImagesRoute.IMG_7856}
             />
           </section>
@@ -750,6 +785,26 @@ const Dawn_wander = () => {
           title="デモ"
           english="LiveDemo"
         />
+      </section>{" "}
+      <section className="section-frame flex-all-center">
+        {" "}
+        <SectionTitle
+          className="w-screen"
+          index="07"
+          title="Github"
+          english="GitHub Repository"
+        />
+        <button
+          type="button"
+          onClick={() => openUrl("https://github.com/Dietary-fibari-hiroto")}
+        >
+          <img
+            className="bg-white rounded-[50%]"
+            src={ImagesRoute.github_icon}
+          />
+          <p className="string-rg">Dietary-fibari-hiroto</p>
+          <p>https://github.com/Dietary-fibari-hiroto</p>
+        </button>
       </section>
     </div>
   );

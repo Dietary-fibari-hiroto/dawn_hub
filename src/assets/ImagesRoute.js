@@ -155,6 +155,10 @@ const ImagesRoute = {
   IMG_2882: require("./images/materials/IMG_2882.jpg"),
   IMG_8332: require("./images/materials/IMG_8332.png"),
   IMG_7856: require("./images/materials/IMG_7856.png"),
+
+  guid: require("./images/materials/guid.png"),
+  guid2: require("./images/materials/guid2.png"),
+  github_icon: require("./images/materials/github-logo_icon-icons.com_73546.png"),
 };
 
 export default ImagesRoute;

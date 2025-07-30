@@ -154,3 +154,13 @@
   border-left: solid 1px #6f3aff;
   padding-left: 15px;
 }
+
+.img-custom-box-horizontal {
+  width: clamp(300px, 30vw, 500px);
+  height: clamp(200px, 21vw, 350px);
+}
+
+.img-custom-box-vertical {
+  width: clamp(200px, 21vw, 350px);
+  height: clamp(300px, 30vw, 500px);
+}

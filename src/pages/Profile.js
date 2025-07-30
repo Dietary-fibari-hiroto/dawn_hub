@@ -148,7 +148,7 @@ const Profile = () => {
               <p className="string-sss">My goal is...</p>
             </div>
             <p
-              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-s`}
+              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-sm`}
             >
               もともとパソコンを触るのが好きで、自然とITに興味を持つようになりました。
               <br />
@@ -228,7 +228,7 @@ const Profile = () => {
               <p className="string-sss">What I keep in mind when designing</p>
             </div>
             <p
-              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-s`}
+              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-sm`}
             >
               Webやアプリをつくるとき、最初に取りかかるのはUIデザインです。
               <br />

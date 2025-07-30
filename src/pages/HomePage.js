@@ -65,15 +65,15 @@ const HomePage = () => {
           <p className="string-lg">継続を凌駕する実行力</p>
         </div>
         <img
-          className={`tracked-element opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] w-[500px] h-[600px] `}
+          className={`tracked-element opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] img-custom-box-vertical `}
           src={ImagesRoute.IMG_7041}
         />
         <img
-          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[64%] top-[30%] w-[600px] h-[400px] z-[2]`}
+          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[64%] top-[30%] img-custom-box-horizontal z-[2]`}
           src={ImagesRoute.IMG_7038}
         />
         <img
-          className={`opacity-section ${animationOpacityStyle} absolute z-[3] left-[47%] top-[41%] w-[500px] h-[600px]`}
+          className={`opacity-section ${animationOpacityStyle} absolute z-[3] left-[47%] top-[41%] img-custom-box-vertical`}
           src={ImagesRoute.IMG_7018}
         />
         <div
@@ -111,11 +111,11 @@ const HomePage = () => {
           <br />
         </p>
         <img
-          className={`tracked-element opacity-section ${animationOpacityStyle} absolute w-[500px] h-[600px] left-[8%] top-[57%]`}
+          className={`tracked-element opacity-section ${animationOpacityStyle} absolute img-custom-box-vertical left-[8%] top-[57%]`}
           src={ImagesRoute.IMG_152}
         />
         <img
-          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[27%] top-[72%] z-[3] w-[500px] h-[600px]`}
+          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[27%] top-[72%] z-[3] img-custom-box-vertical`}
           src={ImagesRoute.IMG_7017}
         />
         <p

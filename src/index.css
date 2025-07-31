@@ -27,13 +27,6 @@ video {
   object-fit: cover;
 }
 
-p {
-  transition: all 0.2s ease-out;
-}
-p:hover {
-  opacity: 0.5;
-}
-
 .fixed-t {
   position: fixed;
   z-index: 9999; /* 大きめにしておく */

@@ -10,10 +10,11 @@ import ImagesRoute from "../../assets/ImagesRoute";
 import { useScrollParallax } from "../../hooks/animation/useScrollParallax";
 
 import useInElementScrollAnimation from "../../hooks/event/useInElementScrollAnimation";
+import UseOpacityAnimation from "../../hooks/UseOpacityAnimation";
 
 const SectionTitle = (props) => {
   return (
-    <div className={`p-[5vw] ${props.className}`}>
+    <div className={` p-[5vw] ${props.className}`}>
       <div className="flex items-center justify-start tracking-[3px]">
         <p className="string-md">{props.index}</p>
         <div className="space-y-[-10px] flex items-start justify-center flex-col">
@@ -27,7 +28,7 @@ const SectionTitle = (props) => {
 const MiniSectionTitle = (props) => {
   return (
     <div
-      className={`${props.className} flex items-center justify-start tracking-[3px]`}
+      className={` ${props.className} flex items-center justify-start tracking-[3px]`}
     >
       <p className="string-m">{props.index}</p>
       <div className="space-y-[-10px] flex items-start justify-center flex-col">
@@ -83,6 +84,8 @@ const sintilyokuOb = [
 ];
 
 const Dawn_wander = () => {
+  const { animationOpacityStyle } = UseOpacityAnimation();
+
   const step = useInElementScrollAnimation("my-target");
   const [showDialog, setShowDialog] = useState(false);
 
@@ -205,7 +208,7 @@ const Dawn_wander = () => {
       </section>
       <section className="relative w-screen h-[200lvh]">
         <SectionTitle
-          className="absolute top-0 left-0"
+          className={`absolute top-0 left-0 opacity-section ${animationOpacityStyle}`}
           index="00"
           title="もくじ"
           english="table of contents"
@@ -214,102 +217,102 @@ const Dawn_wander = () => {
           index="01"
           title="研究テーマ"
           english="Research Theme"
-          className="absolute top-[23%] left-[25%] z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[23%] left-[25%] z-[10] opacity-[0.5]`}
         />
         <MiniSectionTitle
           index="02"
           title="技術スタック"
           english="Tech Stack"
-          className="absolute top-[31%] left-[48%] z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[31%] left-[48%] z-[10] opacity-[0.5]`}
         />{" "}
         <MiniSectionTitle
           index="03"
           title="アーキテクチャ"
           english="Architecture"
-          className="absolute top-[38%] left-[58%] z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[38%] left-[58%] z-[10] opacity-[0.5]`}
         />{" "}
         <MiniSectionTitle
           index="04"
           title="SPAとFramer-motion"
           english="SPA & Framer Motion"
-          className="absolute top-[50%] left-[65%] z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[50%] left-[65%] z-[10] opacity-[0.5]`}
         />{" "}
         <MiniSectionTitle
           index="05"
           title="作成した疑似Webサイト"
           english="Mock Websites Created"
-          className="absolute top-[61%] left-[51%]  z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[61%] left-[51%]  z-[10] opacity-[0.5]`}
         />
         <MiniSectionTitle
           index="06"
           title="デモ"
           english="LiveDemo"
-          className="absolute top-[72%] left-[32%] z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[72%] left-[32%] z-[10] opacity-[0.5]`}
         />
         <MiniSectionTitle
           index="07"
           title="GitHub"
           english="GitHub Repository"
-          className="absolute top-[82%] left-[39%] z-[10] opacity-[0.5]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[82%] left-[39%] z-[10] opacity-[0.5]`}
         />
         {/*--- */}
         <MiniSectionTitle
           index="01"
           title="研究テーマ"
           english="Research Theme"
-          className="absolute top-[23%] left-[25%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[23%] left-[25%] z-[3]`}
         />
         <MiniSectionTitle
           index="02"
           title="技術スタック"
           english="Tech Stack"
-          className="absolute top-[31%] left-[48%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[31%] left-[48%] z-[3]`}
         />{" "}
         <MiniSectionTitle
           index="03"
           title="アーキテクチャ"
           english="Architecture"
-          className="absolute top-[38%] left-[58%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[38%] left-[58%] z-[3]`}
         />{" "}
         <MiniSectionTitle
           index="04"
           title="SPAとFramer-motion"
           english="SPA & Framer Motion"
-          className="absolute top-[50%] left-[65%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[50%] left-[65%] z-[3]`}
         />{" "}
         <MiniSectionTitle
           index="05"
           title="作成した疑似Webサイト"
           english="Mock Websites Created"
-          className="absolute top-[61%] left-[51%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[61%] left-[51%] z-[3]`}
         />
         <MiniSectionTitle
           index="06"
           title="デモ"
           english="LiveDemo"
-          className="absolute top-[72%] left-[32%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[72%] left-[32%] z-[3]`}
         />
         <MiniSectionTitle
           index="07"
           title="GitHub"
           english="GitHub Repository"
-          className="absolute top-[82%] left-[39%] z-[3]"
+          className={`opacity-section ${animationOpacityStyle} absolute top-[82%] left-[39%] z-[3]`}
         />
         <img
           src={ImagesRoute.IMG_7050}
-          className="tracked-element w-[300px] h-[200px] absolute left-[63%] top-[15%] z-[5]"
+          className={`opacity-section ${animationOpacityStyle}  tracked-element w-[300px] h-[200px] absolute left-[63%] top-[15%] z-[5]`}
         />
         <img
           src={ImagesRoute.IMG_7034}
-          className="tracked-element3 w-[300px] h-[200px] absolute left-[15%] top-[33%] z-[5]"
+          className={`opacity-section ${animationOpacityStyle}  tracked-element3 w-[300px] h-[200px] absolute left-[15%] top-[33%] z-[5]`}
         />
         <img
           src={ImagesRoute.IMG_7065}
-          className="tracked-element2 w-[200px] h-[300px] absolute left-[35%] top-[45%] z-[5]"
+          className={`opacity-section ${animationOpacityStyle} tracked-element2 w-[200px] h-[300px] absolute left-[35%] top-[45%] z-[5]`}
         />
         <img
           src={ImagesRoute.IMG_7068}
-          className="tracked-element w-[200px] h-[300px] absolute left-[58%] top-[68%] z-[5]"
+          className={`opacity-section ${animationOpacityStyle} tracked-element w-[200px] h-[300px] absolute left-[58%] top-[68%] z-[5]`}
         />
       </section>
       <section className="section-frame flex-all-center relative">
@@ -319,7 +322,9 @@ const Dawn_wander = () => {
           title="研究テーマ"
           english="Research Theme"
         />
-        <div className="w-full flex-all-center flex-col string-lg">
+        <div
+          className={`opacity-section ${animationOpacityStyle}  w-full flex-all-center flex-col string-lg science-theme`}
+        >
           <p className="pr-[300px]">
             <span className="string-big text-[#9B74FF]">”動き”</span>が与える
           </p>
@@ -329,8 +334,12 @@ const Dawn_wander = () => {
       <section className="w-full flex-all-center flex-col  space-y-[100px] ">
         <div className="w-screen flex justify-start px-[10vw]">
           <div className="space-y-[10px]">
-            <p className="string-lg">・目的...</p>
-            <p className="text-support-line-l string-sm leading-[30px]">
+            <p className={`opacity-section ${animationOpacityStyle} string-lg`}>
+              ・目的...
+            </p>
+            <p
+              className={`opacity-section ${animationOpacityStyle} text-support-line-l string-sm leading-[30px]`}
+            >
               現代のWebサイトでは、アニメーションがUX（ユーザー体験）
               <br />
               の重要な要素として広く活用されており、その効果に関する知見も蓄積されている。
@@ -347,8 +356,12 @@ const Dawn_wander = () => {
         </div>
         <div className="w-screen flex justify-end px-[300px]">
           <div className=" space-y-[10px]">
-            <p className="string-lg">・実験方法...</p>
-            <p className="text-support-line-l string-sm leading-[30px]">
+            <p className={`opacity-section ${animationOpacityStyle} string-lg`}>
+              ・実験方法...
+            </p>
+            <p
+              className={`opacity-section ${animationOpacityStyle} text-support-line-l string-sm leading-[30px]`}
+            >
               実験形式のWebページ合計6種類を用いて
               <br />
               ユーザーにタスクを付与。サイト内でユーザーの行動を監視し
@@ -359,7 +372,11 @@ const Dawn_wander = () => {
         </div>
       </section>
       <section className="w-screen flex-all-center py-[100px]">
-        <p className="string-lg w-full text-center">・進捗...</p>{" "}
+        <p
+          className={`opacity-section ${animationOpacityStyle} string-lg w-full text-center`}
+        >
+          ・進捗...
+        </p>{" "}
         <div className="flex justify-center items-start">
           <div className="flex flex-col items-center justify-center">
             {sintilyokuOb.map(({ state, title }, index) => {
@@ -370,7 +387,7 @@ const Dawn_wander = () => {
               return (
                 <div key={title} className="flex-all-center flex-col">
                   <div
-                    className="size-[50px] rounded-full flex-all-center string-m"
+                    className={`opacity-section ${animationOpacityStyle} size-[50px] rounded-full flex-all-center string-m`}
                     style={{ backgroundColor: color }}
                   >
                     {mark}
@@ -378,7 +395,7 @@ const Dawn_wander = () => {
                   {/* 最後の要素には線を描画しない */}
                   {!isLast && (
                     <div
-                      className="w-[1px] h-[120px]"
+                      className={`opacity-section ${animationOpacityStyle} w-[1px] h-[120px]`}
                       style={{ backgroundColor: color }}
                     />
                   )}
@@ -414,8 +431,12 @@ const Dawn_wander = () => {
             }}
           />
           <div className="pl-[100px] space-y-[10px]">
-            <p className="string-lg">・なぜReact?...</p>
-            <p className="text-support-line-l string-s leading-[30px]">
+            <p className={`opacity-section ${animationOpacityStyle} string-lg`}>
+              ・なぜReact?...
+            </p>
+            <p
+              className={`opacity-section ${animationOpacityStyle} text-support-line-l string-s leading-[30px]`}
+            >
               Reactはアニメーションの抽象化と実装がしやすく、
               <br />
               アニメーションライブラリも豊富で、様々なアニメーションを簡単に実装できたから。
@@ -429,8 +450,12 @@ const Dawn_wander = () => {
         </div>
         <div className="flex items-center justify-evenly w-full">
           <div className="pl-[100px] space-y-[10px]">
-            <p className="string-lg">・なぜASP.NET?...</p>
-            <p className="text-support-line-l string-s leading-[30px]">
+            <p className={`opacity-section ${animationOpacityStyle} string-lg`}>
+              ・なぜASP.NET?...
+            </p>
+            <p
+              className={`opacity-section ${animationOpacityStyle} text-support-line-l string-s leading-[30px]`}
+            >
               アニメーションとユーザーの行動ログの関係性を検証するという特性上、
               <br />
               将来的に蓄積される操作データの分析や可視化も視野に入れている。
@@ -448,7 +473,7 @@ const Dawn_wander = () => {
             </p>
           </div>
           <figure
-            className="size-[300px]"
+            className={`opacity-section ${animationOpacityStyle} size-[300px]`}
             style={{
               backgroundImage: `linear-gradient(to left,#000000,#00000055,#00000000),url(${ImagesRoute.net_icno})`,
               backgroundPosition: "center",
@@ -464,12 +489,18 @@ const Dawn_wander = () => {
           title="アーキテクチャ"
           english="Architecture"
         />
-        <p className="string-lg">レイヤードアーキテクチャ</p>
+        <p className={`opacity-section ${animationOpacityStyle} string-lg`}>
+          レイヤードアーキテクチャ
+        </p>
         <div className="pl-[100px] space-y-[10px]">
-          <p className="string-rg mr-[100px]">
+          <p
+            className={`opacity-section ${animationOpacityStyle} string-rg mr-[100px]`}
+          >
             ・レイヤードアーキテクチャの基本思想...
           </p>
-          <p className="text-support-line-l string-s leading-[30px] ml-[100px]">
+          <p
+            className={`opacity-section ${animationOpacityStyle} text-support-line-l string-s leading-[30px] ml-[100px]`}
+          >
             処理を責務（役割）ごとに分けることで、再利用性・保守性・テストのしやすさを高める構成手法。
             <br />
             僕がこのアーキテクチャを選んでる一番の理由は特定のファイルや処理が視覚的に探しやすいってとこ{" "}
@@ -478,10 +509,14 @@ const Dawn_wander = () => {
       </section>
       <section className="section-frame flex-all-center">
         <div className="space-y-[10px]">
-          <p className="string-rg ml-[100px] w-screen">
+          <p
+            className={`opacity-section ${animationOpacityStyle} string-rg ml-[100px] w-screen`}
+          >
             ・ディレクトリ構想(例)
           </p>
-          <div className="flex justify-center items-center space-x-[100px] string-sm w-full">
+          <div
+            className={`opacity-section ${animationOpacityStyle} flex justify-center items-center space-x-[100px] string-sm w-full`}
+          >
             <p>
               Node.jsプロジェクト
               <br />
@@ -509,8 +544,14 @@ const Dawn_wander = () => {
           </div>
         </div>
         <div className="space-y-[10px]">
-          <p className="string-rg ml-[100px] w-screen">・処理の流れ</p>
-          <div className="flex justify-center items-center space-x-[100px] string-sm w-full">
+          <p
+            className={`opacity-section ${animationOpacityStyle} string-rg ml-[100px] w-screen`}
+          >
+            ・処理の流れ
+          </p>
+          <div
+            className={`opacity-section ${animationOpacityStyle} flex justify-center items-center space-x-[100px] string-sm w-full`}
+          >
             <p>
               Node.js
               <br />
@@ -560,8 +601,14 @@ const Dawn_wander = () => {
         </div>
       </section>
       <section className="section-frame flex-all-center">
-        <p className="string-rg p-[100px] w-screen">・今回の構成方針</p>
-        <div className="flex justify-center items-center space-x-[100px] string-sm w-full">
+        <p
+          className={`opacity-section ${animationOpacityStyle} string-rg p-[100px] w-screen`}
+        >
+          ・今回の構成方針
+        </p>
+        <div
+          className={`opacity-section ${animationOpacityStyle} flex justify-center items-center space-x-[100px] string-sm w-full`}
+        >
           <p>
             ├── server/ <br />
             │ ├── Features/ <br />
@@ -581,8 +628,14 @@ const Dawn_wander = () => {
             ...............................................
           </p>
           <div className="space-y-[50px]">
-            <p className="string-rg ">なんでまたドメイン単位で分けたん？</p>
-            <p className="ml-[50px] text-support-line-l">
+            <p
+              className={`opacity-section ${animationOpacityStyle} string-rg `}
+            >
+              なんでまたドメイン単位で分けたん？
+            </p>
+            <p
+              className={`opacity-section ${animationOpacityStyle} ml-[50px] text-support-line-l`}
+            >
               認証・ユーザー・投稿などの機能はそれぞれ独立した目的を持つ
               <br />
               関連ファイルを同じフォルダにまとめることで、横断的な理解や変更がしやすくなる。
@@ -593,9 +646,13 @@ const Dawn_wander = () => {
               <br />
               (この構造なら知識さえあればコメントアウトいらんまである()嘘です)
             </p>
-            <div className="text-center">
+            <div
+              className={`opacity-section ${animationOpacityStyle} text-center`}
+            >
               <p>簡単に説明すると...</p>
-              <p className="string-md">
+              <p
+                className={`opacity-section ${animationOpacityStyle} string-md`}
+              >
                 やっぱり何をどこでやっているかわかりやすい
               </p>
             </div>
@@ -733,7 +790,7 @@ const Dawn_wander = () => {
         <div className="absolute top-0 left-0 z-[8] h-[600vh] w-screen">
           <section className="w-screen h-[200lvh] relative">
             <img
-              className="tracked-element3 img-custom-box-vertical absolute top-[10%] right-[40%]"
+              className={`opacity-section ${animationOpacityStyle} tracked-element3 img-custom-box-vertical absolute top-[10%] right-[40%]`}
               src={ImagesRoute.dining_table_7782610_1920}
             />
             <img

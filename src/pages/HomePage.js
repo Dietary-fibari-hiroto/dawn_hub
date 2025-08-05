@@ -65,11 +65,11 @@ const HomePage = () => {
           <p className="string-lg">継続を凌駕する実行力</p>
         </div>
         <img
-          className={`tracked-element opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] img-custom-box-vertical `}
+          className={`tracked-element bluer-img-hover opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] img-custom-box-vertical `}
           src={ImagesRoute.IMG_7041}
         />
         <img
-          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[64%] top-[30%] img-custom-box-horizontal z-[2]`}
+          className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[64%] max-sm:left-[50%] top-[30%] img-custom-box-horizontal z-[2]`}
           src={ImagesRoute.IMG_7038}
         />
         <img
@@ -86,7 +86,7 @@ const HomePage = () => {
           className={`opacity-section ${animationOpacityStyle} absolute top-[88%] right-[10%] z-[0] size-[300px] border border-[#6F3AFF]`}
         />
         <p
-          className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute top-[40%] left-[17%] string-ss leading-[30px]`}
+          className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute top-[40%] left-[17%] string-ss leading-[30px] z-[5] max-sm:bg-[#00000066]`}
         >
           わたしは、まだ完成されていない存在です。
           <br />
@@ -119,7 +119,7 @@ const HomePage = () => {
           src={ImagesRoute.IMG_7017}
         />
         <p
-          className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute left-[65%] top-[75%] string-ss leading-[30px]`}
+          className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute left-[65%] top-[75%] z-[5] string-ss leading-[30px] max-sm:left-[20%] max-sm:bg-[#00000066]`}
         >
           足りないからこそ、動き続ける。
           <br />
@@ -147,7 +147,7 @@ const HomePage = () => {
           <div
             className={`opacity-section ${animationOpacityStyle} absolute z-[2] top-1/2 translate-y-[-50%] left-[10%] max-lg:left-1/2 max-lg:translate-x-[-50%]  w-[600px] h-[700px]  text-card flex flex-col justify-center items-start space-y-[50px] max-lg:w-[100%] max-lg:h-[100%] px-[30px]`}
           >
-            <p className="string-md border-b">Who I am</p>
+            <p className="string-md border-b">Who am I</p>
             <p className="string-rg">おのでら ひろと</p>
             <p className="string-ss w-full leading-[30px] border-l border-l-[#FFBC00] pl-[10px]">
               IT系の専門学校に通っており、普段はIoTやITをメインに学んでいます。特にプログラミングやシステム設計に興味があり、技術を生かして少しでも必要とされるプロダクトを生み出すことに魅力を感じています。

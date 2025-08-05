@@ -137,7 +137,7 @@ const Profile = () => {
               }}
             ></div>
           </div>
-          <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
+          <div className="sticky top-0 left-0 section-frame flex items-center justify-around max-lg:flex-col">
             <div
               className={`opacity-section ${animationOpacityStyle} text-start`}
             >
@@ -148,44 +148,33 @@ const Profile = () => {
               <p className="string-sss">My goal is...</p>
             </div>
             <p
-              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-sm`}
+              className={`opacity-section ${animationOpacityStyle} leading-[40px] profile-appeal-text string-s`}
             >
               もともとパソコンを触るのが好きで、自然とITに興味を持つようになりました。
-              <br />
               あるときふと、「今、スマホやパソコンを誰もが当たり前のように使っているけど、
-              <br />
               よく考えたらこれを作った人って本当にすごいな」と感じたことがあります。
-              <br />
               それ以来、“人々にとって当たり前と思われるようなものを、
-              <br />
               自分もいつか作りたい”という想いを持つようになりました。
               <br />
               <br />
               この考え方のきっかけのひとつに、鉄道会社の存在があります。
-              <br />
               たとえば、JRや京阪などの鉄道企業は、毎日何百万人もの人を安全にまた低価格で運び続けています。
-              <br />
               当たり前に電車が動いているように見えて、その裏には膨大なシステムと人の努力がある。
-              <br />
               でも多くの人は、それが少しでも止まるとすぐに不満を口にする。
-              <br />
               それくらい“当たり前の存在”になっている
-              <br />
               いや、なり続けていることに、圧倒され、また胸を打たれました。
               <br />
               <br />
               もちろん、そういった巨大な仕組みを一人でつくることはできません。
-              <br />
               でも、自分にも何かしらの形で、“日々誰かが使い続ける仕組み”を届けられるんじゃないか――
               <br />
               <br />
               そう思ったとき、自分の好きな分野であるITの世界で挑戦していきたいと思うようになりました。
-              <br />
             </p>
           </div>
         </section>{" "}
         <section
-          className="relative w-full h-[300lvh] scroll-target2"
+          className="relative w-full h-[300lvh] scroll-target2 "
           style={{
             backgroundImage: `linear-gradient(#00000066),url(${ImagesRoute.IMG_1782})`,
             backgroundSize: "cover",
@@ -212,7 +201,7 @@ const Profile = () => {
               }}
             ></div>
           </div>
-          <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
+          <div className="sticky top-0 left-0 section-frame flex items-center justify-around max-lg:flex-col">
             <div
               className={`opacity-section ${animationOpacityStyle} text-start`}
             >
@@ -228,28 +217,21 @@ const Profile = () => {
               <p className="string-sss">What I keep in mind when designing</p>
             </div>
             <p
-              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-sm`}
+              className={`opacity-section ${animationOpacityStyle} leading-[40px] string-s profile-appeal-text`}
             >
               Webやアプリをつくるとき、最初に取りかかるのはUIデザインです。
-              <br />
               私は個人制作でも、まず「見やすさ」「使いやすさ」「ちょっとした遊び心」
-              <br />
               を意識しながらデザインを進めています。
               <br />
               <br />
               なかでも、アニメーションや細かなギミックを通して
-              <br />
               “印象に残る体験”をつくることにこだわっています。
-              <br />
               “動き”を通じて心が動くような、そんなWebサイトが好きです。
               <br />
               <br />
               目指しているのは、シンプルで操作しやすいのに、どこか彩りがあって心地いい。
-              <br />
               そんな「使いやすさ」と「華やかさ」のバランスがとれたWebサイトを、
-              <br />
               自分の手で届けられるようになりたいと思っています。
-              <br />
             </p>
           </div>
         </section>

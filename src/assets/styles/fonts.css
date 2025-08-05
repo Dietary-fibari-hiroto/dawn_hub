@@ -26,20 +26,20 @@
   font-style: normal;
 }
 .KinutaShinStdN48K {
-  font-family: "kinuta-shin-stdn", sans-serif;
+  font-family: kinuta-shin-stdn, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .KinutaShinStdN6K {
-  font-family: "kinuta-shin-stdn", sans-serif;
+  font-family: kinuta-shin-stdn, sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
 .Ryo-Gothic-PlusN-H {
-  font-family: "ryo-gothic-plusn", sans-serif;
-  font-weight: 800;
+  font-family: ryo-gothic-plusn, sans-serif;
   font-style: normal;
+  font-weight: 800;
 }
 
 .text-shadow-black {

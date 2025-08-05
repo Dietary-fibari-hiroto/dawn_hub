@@ -164,3 +164,16 @@
   width: clamp(200px, 21vw, 350px);
   height: clamp(300px, 30vw, 500px);
 }
+
+.profile-appeal-text {
+  width: clamp(400px, 35vw, 800px);
+}
+
+.execution-button {
+  background-color: #000000;
+  border-radius: 10px;
+  color: white;
+  width: clamp(200px, 20vw, 250px);
+  height: 50px;
+  font-size: 1.2em;
+}

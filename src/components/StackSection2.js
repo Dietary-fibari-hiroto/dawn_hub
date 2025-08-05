@@ -31,6 +31,8 @@ const StickviewContent = styled.img`
   left: ${({ $position }) => $position}%;
   width: ${({ $size }) => $size}px;
   height: ${({ $size }) => $size}px;
+  opacity: ${({ $opacity }) => $opacity};
+  z-index: ${({ $zindex }) => $zindex};
   transition: all 1.5s ease;
 `;
 const imgValues = [
@@ -146,13 +148,15 @@ const StackSection2 = () => {
   }, []);
 
   return (
-    <div className="relative flex-all-center w-screen overflow-x-hidden overflow-y-hidden h-[50vh] space-y-[50px]">
+    <div className="relative flex-all-center w-screen overflow-x-hidden overflow-y-hidden  space-y-[50px]">
       {viewPattern ? (
         <StackviewContainer>
           {imgValues.map((item, index) => (
             <StickviewContent
               $size={index === processIndex ? "250" : "100"}
+              $opacity={index === processIndex ? "1" : "0.5"}
               $position={positionValue + 10 * index}
+              $zindex={index === processIndex ? "3" : "1"}
               key={index}
               src={item.src}
               alt="test"
@@ -187,7 +191,7 @@ const StackSection2 = () => {
         </StackviewContainer>
       ) : (
         <div className="flex-all-center">
-          <div className="px-[50px] flex flex-wrap gap-[100px] flex-1">
+          <div className="px-[50px] flex flex-wrap justify-center gap-[100px] flex-1">
             {imgValues.map((item, index) => (
               <img
                 className="size-[100px] hover:scale-[1.2] hover:opacity-[0.5] transition duration-100"

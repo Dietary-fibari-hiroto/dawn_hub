@@ -159,6 +159,12 @@ const ImagesRoute = {
   guid: require("./images/materials/guid.png"),
   guid2: require("./images/materials/guid2.png"),
   github_icon: require("./images/materials/github-logo_icon-icons.com_73546.png"),
+
+  menu_bar: require("./images/icons/menu_bar.png"),
+  volumeanalyzer: require("./images/icons/volumeanalyzer.png"),
+  audioanalyzer_icon: require("./images/icons/audioanalyzer_icon.png"),
+  home_icon: require("./images/icons/home_icon.png"),
+  pixcelanalyzer_icon: require("./images/icons/pixcelanalyzer_icon.png"),
 };
 
 export default ImagesRoute;

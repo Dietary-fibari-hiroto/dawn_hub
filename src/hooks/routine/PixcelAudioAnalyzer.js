@@ -1,7 +1,7 @@
 // AudioAnalyzer.js
 import React, { useEffect, useRef, useState } from "react";
 
-const AudioAnalyzer = () => {
+const PixcelAudioAnalyzer = () => {
   const canvasRef = useRef(null);
   const [audioContext, setAudioContext] = useState(null);
   const [analyser, setAnalyser] = useState(null);
@@ -41,21 +41,21 @@ const AudioAnalyzer = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    // 線形補間で色を作る関数
-    const lerpColor = (color1, color2, t) => {
-      const c1 = parseInt(color1.slice(1), 16);
-      const c2 = parseInt(color2.slice(1), 16);
-      const r1 = (c1 >> 16) & 0xff;
-      const g1 = (c1 >> 8) & 0xff;
-      const b1 = c1 & 0xff;
-      const r2 = (c2 >> 16) & 0xff;
-      const g2 = (c2 >> 8) & 0xff;
-      const b2 = c2 & 0xff;
-      const r = Math.round(r1 + (r2 - r1) * t);
-      const g = Math.round(g1 + (g2 - g1) * t);
-      const b = Math.round(b1 + (b2 - b1) * t);
-      return `rgb(${r},${g},${b})`;
-    };
+    const LEVELS = 12;
+    const colors = [
+      "blue", // 0-2
+      "#00d5ff",
+      "#00d5ff",
+      "#00d5ff", // 3-5
+      "#00d5ff",
+      "#00d5ff",
+      "#00d5ff", // 6-8
+      "#00d5ff",
+      "yellow",
+      "yellow", // 9-1
+      "yellow",
+      "red", // 12-13
+    ];
 
     const draw = () => {
       requestAnimationFrame(draw);
@@ -65,27 +65,28 @@ const AudioAnalyzer = () => {
       ctx.fillStyle = "black";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      const sliceWidth = canvas.width / dataArray.length;
-      let x = 0;
+      const barWidth = 5;
+      const barGap = 1;
+      const totalBars = Math.floor(
+        (canvas.width + barGap) / (barWidth + barGap)
+      );
 
-      for (let i = 0; i < dataArray.length - 1; i++) {
-        const value1 = dataArray[i];
-        const value2 = dataArray[i + 1];
+      const barHeightUnit = canvas.height / LEVELS;
 
-        const y1 = canvas.height - (value1 / 255) * canvas.height;
-        const y2 = canvas.height - (value2 / 255) * canvas.height;
+      for (let i = 0; i < totalBars; i++) {
+        const value = dataArray[i] || 0; // i番目の周波数成分
+        const normalizedValue = Math.min(value / 255, 1); // 0〜1に正規化
+        const currentLevel = Math.floor(normalizedValue * (LEVELS - 1));
 
-        // 音量に応じて色を補間
-        const color1 = lerpColor("#00d5ff", "#ff0000", value1 / 255);
-        const color2 = lerpColor("#00d5ff", "#ff0000", value2 / 255);
-
-        ctx.beginPath();
-        ctx.moveTo(x, y1);
-        ctx.strokeStyle = color1;
-        ctx.lineTo(x + sliceWidth, y2);
-        ctx.stroke();
-
-        x += sliceWidth;
+        for (let level = 0; level <= currentLevel; level++) {
+          ctx.fillStyle = colors[level];
+          ctx.fillRect(
+            i * (barWidth + barGap),
+            canvas.height - (level + 1) * barHeightUnit,
+            barWidth,
+            barHeightUnit
+          );
+        }
       }
     };
 
@@ -103,4 +104,4 @@ const AudioAnalyzer = () => {
   );
 };
 
-export default AudioAnalyzer;
+export default PixcelAudioAnalyzer;

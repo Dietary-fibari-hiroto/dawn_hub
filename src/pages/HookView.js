@@ -1,5 +1,9 @@
 import AudioAnalyzer from "../hooks/AudioAnalyzer";
 import GraphicEQ from "../hooks/hobby/GraphicEQ";
+import { RackButton, EffectIcon } from "../components";
+
+import ImagesRoute from "../assets/ImagesRoute";
+import { effectList } from "../constants/audioEffectList";
 
 const HookView = () => {
   const frequencys = [
@@ -37,7 +41,36 @@ const HookView = () => {
   ];
 
   return (
-    <div className="flex-all-center section-frame kinuta-maruminfuji-stdn space-y-[100px]">
+    <div className="flex-all-center kinuta-maruminfuji-stdn space-y-[100px]">
+      <section className="my-[50px] bg-black w-[90vw] h-[400px] rounded-[50px] flex items-center justify-between">
+        <div className="flex items-center h-full overflow-y-hidden">
+          <div className="mt-[30px] mx-[50px] space-y-[10px] flex flex-col justify-start h-full">
+            <RackButton img={ImagesRoute.menu_bar} />
+            <RackButton img={ImagesRoute.home_icon} />
+          </div>
+          <div className="w-[35vw] h-[90%] bg-[#222222] pt-[10px] pl-[10px]">
+            <p className="string-m">Routine List</p>
+            <div className="mt-[10px] ml-[10px] flex flex-col items-start justify-start space-y-[15px]">
+              {effectList.map((effect) => (
+                <div
+                  className="flex space-x-[30px] items-center string-sm"
+                  key={effect.name}
+                >
+                  <EffectIcon img={effect.img} />
+                  <p>{effect.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div>
+          <RackButton />
+          <div>
+            <p className="string-lg">DAWN</p>
+            <p className="string-s">Audio routine</p>
+          </div>
+        </div>
+      </section>
       <section className={"w-[80%] flex-all-center"}>
         <AudioAnalyzer />
         <div className=" w-full flex items-center justify-between">
@@ -48,7 +81,13 @@ const HookView = () => {
           ))}
         </div>
       </section>
-      <section>
+      <section className="flex">
+        <GraphicEQ />
+        <GraphicEQ />
+        <GraphicEQ />
+        <GraphicEQ /> <GraphicEQ />
+        <GraphicEQ />
+        <GraphicEQ />
         <GraphicEQ />
       </section>
     </div>

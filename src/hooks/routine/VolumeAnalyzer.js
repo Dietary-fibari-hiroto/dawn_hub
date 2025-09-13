@@ -51,7 +51,7 @@ const VolumeAnalyzer = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.lineWidth = 2;
-      ctx.strokeStyle = "#00d5ff";
+      ctx.strokeStyle = "#9B77FF";
 
       ctx.beginPath();
 

@@ -18,7 +18,7 @@ const Shield = (items) => {
       className=" opacity-down pointer-up relative min-w-[230px] h-[350px] flex flex-all-center kinuta-maruminfuji-stdn space-y-[50px]"
     >
       <img
-        className=" w-auto h-[150px] z-[3] absolute  top-[0] left-[50%] -translate-x-1/2"
+        className=" w-auto h-[150px] z-[3] absolute  top-[0] left-[50%] -translate-x-1/2 object-contain"
         src={items.img}
         alt="ShieldLogo"
       />

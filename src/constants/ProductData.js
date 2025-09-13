@@ -12,17 +12,7 @@ export const ProductData = [
     explain:
       "暗い部屋でも目に優しく、快適に作業を続けられます。Nocturnal Wanderingsを実行して、夜間の作業をもっと快適に。",
   },
-  {
-    path: "/product/ss",
-    img: ImagesRoute.manaphoto,
-    log: ImagesRoute.SSlog,
-    gradient: "from-[#ffffff] to-[#F9D176]",
-    title: "Shutter Showcase",
-    subtitle: "すべての一瞬を、作品に",
-    stack: "Webアプリケーション",
-    explain:
-      "綺麗に取れたお写真、飾ってみませんか？撮影した写真を、より美しい形で見せたいときに最適です。あなたの作品を引き立てるための、スタイリッシュな展示が簡単に実現できます。",
-  },
+
   {
     path: "https://matitaka.dawn-waiting.com",
     img: ImagesRoute.manami_hydoro,
@@ -67,12 +57,12 @@ export const ProductData = [
       "``シック``で``モダン``なオリジナルのデジタル時計。シンプルで優しい雰囲気があなたの作業をお供します。是非‘‘F11‘‘キー（フルスクリーンモード）でお楽しみください",
   },
   {
-    path: "/production/write",
+    path: "/product/write",
     img: ImagesRoute.IMG_7065,
     log: ImagesRoute.write_logo,
     gradient: "from-[#000000] to-[#545454]",
     title: "Write",
-    subtitle: "デジタル時計",
+    subtitle: "メモソフト",
     stack: "windowsソフト ＆ クロスプラットフォームアプリ",
     explain: `DAWN-Writeはあなたの気分に寄り添う「着せ替えメモソフト」です。
                       無機質なテキストだけでは物足りない。
@@ -86,8 +76,34 @@ export const ProductData = [
     log: ImagesRoute.table_5356682_1920,
     gradient: "from-[#000000] to-[#545454]",
     title: "Dawn-wander発表資料",
-    ubtitle: "UX変化分析アプリ",
+    subtitle: "UX変化分析アプリ",
     stack: "発表資料",
+    explain: "研究室選抜プレゼン用に作成したweb資料",
+  },
+  {
+    path: "/function/audioroutine",
+    img: ImagesRoute.IMG_7018,
+    log: ImagesRoute.Audioroutine_icon,
+    gradient: "from-[#000000] to-[#545454]",
+    title: "Dawn-AudioRoutine",
+    subtitle: "-音-を使った処理",
+    stack: "Webアプリケーション",
     explain: "",
+  },
+  {
+    path: "/product/sangria",
+    img: ImagesRoute.sangria_img,
+    log: ImagesRoute.sangira_icon,
+    gradient: "from-[#000000] to-[#545454]",
+    title: "Dawn-Sangria",
+    subtitle: "ワインボトルが光のインテリアに",
+    stack: "IoT",
+    explain: `Dawn-Sangriaは、飲み終えたワインボトルを“灯り”へと生まれ変わらせるライトインテリアです。
+ボトルに差し込むだけで、柔らかな光が広がり、空間を上品に演出します。
+windowsソフトウェア「Dawn-rumos」から操作でき、光の色や明るさを自由に調整可能。
+リビングを落ち着いた空間にしたり、ディナーの雰囲気を華やかにしたりと、シーンに合わせた演出が簡単に楽しめます。
+名前の由来は「ワインカクテルのサングリア」と「夜明け（Dawn）」。
+深みあるワインの色合いに、朝の光を差し込むイメージを込めています。
+Dawn-Sangriaは、インテリアとしての美しさと実用性を両立させた、ちょっと特別なライトです。`,
   },
 ];

@@ -1,3 +1,7 @@
+.image-effect {
+  filter: blur(1px) brightness(2) sepia(1) hue-rotate(0deg) saturate(5); /* 明るさ70%、4pxぼかし */
+}
+
 .flex-all-center {
   display: flex;
   flex-direction: column;

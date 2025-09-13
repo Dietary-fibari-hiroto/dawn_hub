@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import TopPageBackScreen from "../components/TopPageBackScreen";
 import ShootingStars from "../hooks/ShootingStarts";
 import LinkButton from "../components/LinkButton";
-import ScrollLittleFollow from "../hooks/useScrollLittleFollow";
 import { useScrollParallax } from "../hooks/animation/useScrollParallax";
+import Shield from "../components/Shield";
 
 const HomePage = () => {
   const { animationOpacityStyle } = UseOpacityAnimation();
@@ -46,7 +46,7 @@ const HomePage = () => {
           <p className="shootingstar-underline pl-[40px] string-big flex-all-center tracking-[20px]">
             DAWN
           </p>
-          <p className="tracking-[5cpx]">Portfolio(v1.3.1)</p>
+          <p className="tracking-[5cpx]">Portfolio(v1.3.2)</p>
           <div className="absolute bottom-[10%] right-1/2 translate-x-1/2 flex-all-center space-y-[50px]">
             <div className="scroll-arrow">
               <div className="line"></div>
@@ -56,6 +56,32 @@ const HomePage = () => {
             <p>Scroll</p>
           </div>
         </div>
+      </section>
+      <section className="flex-all-center flex-col space-y-[30px]">
+        <div className="text-center">
+          <p
+            className={`opacity-section ${animationOpacityStyle}  string-md  `}
+          >
+            Current Project
+          </p>
+          <p className={`string-s opacity-section ${animationOpacityStyle}`}>
+            現行のプロジェクト
+          </p>
+        </div>
+        <iframe
+          className={`w-[50vw] min-w-[390px] aspect-[16/9] opacity-section ${animationOpacityStyle}`}
+          src="https://www.youtube.com/embed/QCjvEgtNMpo"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <Shield
+          img={ImagesRoute.sangira_icon}
+          title="Dawn-Sangria"
+          explain="ワインボトルが光のインテリアに"
+          link="/product/sangria"
+        />
       </section>
       <section className="relative KinutaShinStdN6K w-full h-[300lvh] ">
         <div
@@ -88,26 +114,25 @@ const HomePage = () => {
         <p
           className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute top-[40%] left-[17%] string-ss leading-[30px] z-[5] max-sm:bg-[#00000066]`}
         >
-          わたしは、まだ完成されていない存在です。
+          足りないからこそ挑み続ける。
+          <br />
+          やってみることでしか見えない景色がある。
           <br />
           <br />
-          ポートフォリオに並ぶ作品たちは、 <br />
-          自分の問いと、試行錯誤の記録です。
+          「どうすればもっと良くなるか」
+          <br />
+          「次は何をつくろうか」
           <br />
           <br />
-          考える前に動いた日々。
+          このサイトは、私の“現在地”を映す場所であり、
           <br />
-          動いてから、考え直した日々。
-          <br />
-          その繰り返しが、今のわたしをかたちづくっています。
+          同時に“これから”へ踏み出すスタート地点でもあります。
           <br />
           <br />
-          続けることの大切さは知っています。
+          未完成であることを恐れず、
           <br />
-          けれど、わたしをここまで運んできたのは、 <br />
-          ただ積み重ねるだけではなく、
+          実行力を持って挑戦を続けていきます。
           <br />
-          継続を凌駕する実行力でした。
           <br />
         </p>
         <img

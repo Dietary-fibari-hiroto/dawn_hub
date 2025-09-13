@@ -165,6 +165,12 @@ const ImagesRoute = {
   audioanalyzer_icon: require("./images/icons/audioanalyzer_icon.png"),
   home_icon: require("./images/icons/home_icon.png"),
   pixcelanalyzer_icon: require("./images/icons/pixcelanalyzer_icon.png"),
+
+  Audioroutine_icon: require("./images/icons/Audioroutine_icon.png"),
+  powersupply_icon: require("./images/icons/powersupply_icon.png"),
+  sangira_icon: require("./images/icons/sangira_icon.png"),
+  sangria_img: require("./images/photos/sangria_img.png"),
+  rumos_ts: require("./images/photos/rumos_ts.png"),
 };
 
 export default ImagesRoute;

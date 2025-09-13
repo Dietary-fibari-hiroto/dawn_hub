@@ -2,14 +2,14 @@ import {
   AudioAnalyzer,
   PixcelAudioAnalyzer,
   VolumeAnalyzer,
-} from "../hooks/routine";
-import GraphicEQ from "../hooks/hobby/GraphicEQ";
-import { RackButton, EffectIcon } from "../components";
+} from "../../hooks/routine";
+import GraphicEQ from "../../hooks/hobby/GraphicEQ";
+import { RackButton, EffectIcon } from "../../components";
 
-import ImagesRoute from "../assets/ImagesRoute";
-import { effectList } from "../constants/audioEffectList";
+import ImagesRoute from "../../assets/ImagesRoute";
+import { effectList } from "../../constants/audioEffectList";
 
-const HookView = () => {
+const AudioRoutine = () => {
   const frequencys = [
     "20Hz",
     "25Hz",
@@ -45,7 +45,7 @@ const HookView = () => {
   ];
 
   return (
-    <div className="flex-all-center kinuta-maruminfuji-stdn space-y-[100px]">
+    <div className="flex-all-center kinuta-maruminfuji-stdn">
       <section className="my-[50px] bg-black w-[90vw] h-[400px] rounded-[50px] flex items-center justify-between">
         <div className="flex items-center h-full overflow-y-hidden">
           <div className="mt-[30px] mx-[50px] space-y-[10px] flex flex-col justify-start h-full">
@@ -67,18 +67,22 @@ const HookView = () => {
             </div>
           </div>
         </div>
-        <div>
-          <RackButton />
-          <div>
-            <p className="string-lg">DAWN</p>
-            <p className="string-s">Audio routine</p>
+        <div className="h-full flex flex-col justify-end items-center space-y-[80px] py-[20px]">
+          <RackButton img={ImagesRoute.powersupply_icon} />
+          <div className="flex items-center">
+            <img className="h-[50px]" src={ImagesRoute.Audioroutine_icon} />
+            <div className="mx-[50px] KinutaShinStdN48K text-center">
+              <p className="string-lg tracking-[5px]">DAWN</p>
+              <p className="string-s tracking-[10px]">Audio routine</p>
+            </div>
           </div>
         </div>
       </section>
-      <section className={"w-[80%] flex-all-center"}>
+      <section className={"w-[80%] flex-all-center space-y-[10px]"}>
         <AudioAnalyzer />
-        <PixcelAudioAnalyzer />
+        {/*<PixcelAudioAnalyzer />*/}
         <VolumeAnalyzer />
+
         <div className=" w-full flex items-center justify-between">
           {frequencys.map((frequency, index) => (
             <p className="text-[13px]" key={index}>
@@ -91,7 +95,7 @@ const HookView = () => {
         <GraphicEQ />
         <GraphicEQ />
         <GraphicEQ />
-        <GraphicEQ /> <GraphicEQ />
+        <GraphicEQ />
         <GraphicEQ />
         <GraphicEQ />
         <GraphicEQ />
@@ -99,4 +103,5 @@ const HookView = () => {
     </div>
   );
 };
-export default HookView;
+
+export default AudioRoutine;

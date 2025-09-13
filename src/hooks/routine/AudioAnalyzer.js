@@ -76,8 +76,8 @@ const AudioAnalyzer = () => {
         const y2 = canvas.height - (value2 / 255) * canvas.height;
 
         // 音量に応じて色を補間
-        const color1 = lerpColor("#00d5ff", "#ff0000", value1 / 255);
-        const color2 = lerpColor("#00d5ff", "#ff0000", value2 / 255);
+        const color1 = lerpColor("#9B77FF", "#FFBC00", value1 / 255);
+        const color2 = lerpColor("#9B77FF", "#FFBC00", value2 / 255);
 
         ctx.beginPath();
         ctx.moveTo(x, y1);

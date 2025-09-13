@@ -21,6 +21,7 @@ import ChronoDawn from "../pages/functions/Chronodawn";
 import ReserchMa from "../pages/materials/ResearchMa";
 import Dawn_wander from "../pages/materials/Dawn_wander";
 import ResponsiveAlert from "../pages/ResponsiveAlert";
+import { AudioRoutine } from "../pages";
 
 const routeList = [
   { path: "/", element: <HomePage /> },
@@ -35,6 +36,7 @@ const routeList = [
   { path: "/product/logis", element: <Logis /> },
 
   { path: "/function/chronodawn", element: <ChronoDawn /> },
+  { path: "/function/audioroutine", element: <AudioRoutine /> },
 
   { path: "/hook/hookview", element: <HookView /> },
 
@@ -67,7 +69,7 @@ const AssemblyRoutes = () => {
               element={<AnimatedRouteSet>{element}</AnimatedRouteSet>}
             />
           ))}
-          <Route path="/production/*" element={<ProductionRoutes />} />
+          <Route path="/product/*" element={<ProductionRoutes />} />
         </Routes>
       )}
     </AnimatePresence>

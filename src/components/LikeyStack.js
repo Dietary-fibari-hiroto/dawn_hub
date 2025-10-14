@@ -6,11 +6,11 @@ const LikeyStack = () => {
     ImagesRoute.html,
     ImagesRoute.css,
     ImagesRoute.js,
+    ImagesRoute.csharp,
     ImagesRoute.node,
     ImagesRoute.react,
-    ImagesRoute.laravel,
-    ImagesRoute.NET_icon,
-    ImagesRoute.netmaui,
+    ImagesRoute.net_icno,
+    ImagesRoute.logo_winui,
     ImagesRoute.tailwind,
   ];
 

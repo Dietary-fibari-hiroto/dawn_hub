@@ -171,6 +171,15 @@ const ImagesRoute = {
   sangira_icon: require("./images/icons/sangira_icon.png"),
   sangria_img: require("./images/photos/sangria_img.png"),
   rumos_ts: require("./images/photos/rumos_ts.png"),
+
+  sangria_phooto_1: require("./images/photos/sangria_phooto-1.jpg"),
+  sangria_phooto_2: require("./images/photos/sangria_phooto-2.jpg"),
+  sangria_phooto_3: require("./images/photos/sangria_phooto-3.jpg"),
+  sangria_phooto_4: require("./images/photos/sangria_phooto-4.jpg"),
+  sangria_phooto_5: require("./images/photos/sangria_phooto-5.jpg"),
+  sangria_phooto_6: require("./images/photos/sangria_phooto-6.jpg"),
+  sangria_phooto_7: require("./images/photos/sangria_phooto-7.jpg"),
+  sangria_phooto_8: require("./images/photos/sangria_phooto-8.jpg"),
 };
 
 export default ImagesRoute;

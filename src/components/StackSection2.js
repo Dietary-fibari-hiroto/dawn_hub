@@ -57,7 +57,7 @@ const imgValues = [
     key: "cpp",
     src: ImagesRoute.cpp,
     explain: `IoT開発やOpenCVを扱うのに使用。
-    Arduinoが扱える`,
+    Arduino/PlatformIOが扱える`,
   },
   {
     key: "go",
@@ -93,12 +93,12 @@ const imgValues = [
   {
     key: "xml",
     src: ImagesRoute.xml,
-    explain: `アプリケーションを作成するのに使用。`,
+    explain: `Androidアプリケーションを作成するのに使用。`,
   },
   {
     key: "xaml",
     src: ImagesRoute.xaml,
-    explain: `アプリケーションを作成するのに使用。`,
+    explain: `Windowsアプリケーションを作成するのに使用。`,
   },
   {
     key: "mysql",

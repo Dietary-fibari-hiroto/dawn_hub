@@ -8,6 +8,11 @@
   justify-content: center;
   align-items: center;
 }
+.background-center {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .section-frame {
   min-width: 100vw;

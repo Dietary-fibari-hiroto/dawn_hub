@@ -46,7 +46,7 @@ const HomePage = () => {
           <p className="shootingstar-underline pl-[40px] string-big flex-all-center tracking-[20px]">
             DAWN
           </p>
-          <p className="tracking-[5cpx]">Portfolio(v1.3.2)</p>
+          <p className="tracking-[5cpx]">Portfolio(v1.4.2)</p>
           <div className="absolute bottom-[10%] right-1/2 translate-x-1/2 flex-all-center space-y-[50px]">
             <div className="scroll-arrow">
               <div className="line"></div>
@@ -146,24 +146,19 @@ const HomePage = () => {
         <p
           className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute left-[65%] top-[75%] z-[5] string-ss leading-[30px] max-sm:left-[20%] max-sm:bg-[#00000066]`}
         >
-          足りないからこそ、動き続ける。
-          <br />
-          やってみることでしか、見えない景色がある。
+          このサイトは「曙（DAWN）」をテーマにデザインしました。
           <br />
           <br />
-          「どうすればもっとよくなるか」
+          なぜこのテーマを選んだかというと、
           <br />
-          「次はなにをつくろうか」
-          <br />
-          <br />
-          このサイトは、わたしの“今の姿”を映す場所です。
-          <br />
-          でも同時に、“これから”のためのスタート地点でもあります。
+          昔から夜明け前の静けさや澄んだ空気が好きだからです。
           <br />
           <br />
-          未完成であることを恐れず、
+          その雰囲気を表現するために、
           <br />
-          挑み続ける自分でありたいと思っています。
+          全体をシンプルにまとめつつも、
+          <br />
+          どこか華やかさを感じられるよう意識して仕上げました。
           <br />
         </p>
       </section>

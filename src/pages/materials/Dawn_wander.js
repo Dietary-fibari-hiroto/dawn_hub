@@ -38,7 +38,6 @@ const MiniSectionTitle = (props) => {
     </div>
   );
 };
-const TopicLabel = () => {};
 
 const sintilyokuOb = [
   {

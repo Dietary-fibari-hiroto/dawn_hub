@@ -24,15 +24,17 @@ const skillData = [
           "コードを書くことで自由自在にUIを構築、描画できることに楽しさを感じ独学で勉強をしています。モジュール化を意識して行い、重複したコードをこまめに関数で切り出すことで可読性や再利用性の向上を図っています。HTMLやCSSの値、プロパティ、要素名はほぼ暗記しておりスピーディーかつ正確なコーディングが可能です。",
       },
       {
-        filedTitle: "アプリケーション開発",
+        filedTitle: "アプリケーション/ソフトウェア開発",
         libraryName: "C#/Java/XML/XAML:.NET framework/.NET MAUI/Android Studio",
-        stackExplain:
-          "もともと.NET frameworkに興味があったのと授業でAndroid Studioを学んだことをきっかけに授業外でも勉強しています。.NET frameworkでは自分でほしいなと思った機能を実装したアプリケーションを中心に作成しており、実際に自分で使っているものもあります。このポートフォリオサイト内でダウンロードできるものもあるのでよかったら「Product」から確認してみてください。AndroidStudioではjavaとkotlinの両方の実装方法を学びましたが、正直言ってkotlinは苦手です。",
+        stackExplain: `もともと.NET frameworkに興味があったのと授業でAndroid Studioを学んだことをきっかけに授業外でも勉強しています。.NET frameworkでは自分でほしいなと思った機能を実装したアプリケーションを中心に作成しており、実際に自分で使っているものもあります。このポートフォリオサイト内でダウンロードできるものもあるのでよかったら「Product」から確認してみてください。AndroidStudioではjavaとkotlinの両方の実装方法を学びましたが、正直言ってkotlinは苦手です。
+          現在WinUI3やWPFを使ったソフトウェア開発もおこなっています。
+          `,
       },
       {
         filedTitle: "IoT",
         libraryName: "C++/Javascript:Arduino/Espruino",
-        stackExplain: "授業でESP32を使った勉強をしてきました。",
+        stackExplain:
+          "授業でESP32を使った勉強をしてきました。esp32を用いてユニバーサル基板や数々のモジュールをと併用して個人でも開発を行っています。MQTTを用いてサーバーからリクエストを受け取る処理を実装したり、自分の思考を形にしています。",
       },
     ],
   },

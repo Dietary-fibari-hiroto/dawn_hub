@@ -36,3 +36,31 @@ const UseOpacityAnimation = () => {
 };
 
 export default UseOpacityAnimation;
+
+export const useOpacityAnimation2 = () => {
+  const handleOpacity = () => {
+    const windowHeight = window.innerHeight;
+    const sections = document.querySelectorAll(".ani-o-element");
+
+    // NodeList を Array に変換してから forEach
+    Array.from(sections).forEach((section, index) => {
+      const itemHeight = section.getBoundingClientRect().top;
+      if (itemHeight < window.innerHeight * 0.8) {
+        section.classList.add("opacityAfter");
+        section.setAttribute("data-index", index);
+      } else {
+        section.classList.remove("opacityAfter");
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleOpacity);
+    // 初期チェック
+    handleOpacity();
+
+    return () => {
+      window.removeEventListener("scroll", handleOpacity);
+    };
+  }, []);
+};

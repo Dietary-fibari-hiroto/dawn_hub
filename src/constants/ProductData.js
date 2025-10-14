@@ -92,7 +92,7 @@ export const ProductData = [
   },
   {
     path: "/product/sangria",
-    img: ImagesRoute.sangria_img,
+    img: ImagesRoute.sangria_phooto_3,
     log: ImagesRoute.sangira_icon,
     gradient: "from-[#000000] to-[#545454]",
     title: "Dawn-Sangria",

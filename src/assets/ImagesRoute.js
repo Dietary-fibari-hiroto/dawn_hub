@@ -180,6 +180,20 @@ const ImagesRoute = {
   sangria_phooto_6: require("./images/photos/sangria_phooto-6.jpg"),
   sangria_phooto_7: require("./images/photos/sangria_phooto-7.jpg"),
   sangria_phooto_8: require("./images/photos/sangria_phooto-8.jpg"),
+
+  //Dayoff素材
+  carnav_photo: require("./images/materials/carnav_photo.png"),
+  dayoff_tecnorogy: require("./images/materials/dayoff_tecnorogy.png"),
+  bubble: require("./images/materials/bubble.png"),
+  DayoffWhiteLogo: require("./images/materials/DayoffWhiteLogo.png"),
+  jumbubblelogo: require("./images/materials/jumbubblelogo.png"),
+  night_view: require("./images/materials/night_view.jpg"),
+  pexels_thevibrantmachine_3066867: require("./images/materials/pexels-thevibrantmachine-3066867.jpg"),
+  example_dayoff2: require("./images/materials/example_dayoff2.png"),
+  ruizi_1: require("./images/materials/ruizi_1.png"),
+  ruizi_2: require("./images/materials/ruizi_2.png"),
+  ruizi_3: require("./images/materials/ruizi_3.jpg"),
+  example_dayoff: require("./images/materials/example_dayoff.png"),
 };
 
 export default ImagesRoute;

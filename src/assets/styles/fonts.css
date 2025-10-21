@@ -41,6 +41,10 @@
   font-style: normal;
   font-weight: 800;
 }
+.Noto-Sans-CJK-JP {
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-style: normal;
+}
 
 .text-shadow-black {
   text-shadow: 2px 2px 3px black;

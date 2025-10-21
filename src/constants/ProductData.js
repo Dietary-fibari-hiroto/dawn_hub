@@ -106,4 +106,21 @@ windowsソフトウェア「Dawn-rumos」から操作でき、光の色や明る
 深みあるワインの色合いに、朝の光を差し込むイメージを込めています。
 Dawn-Sangriaは、インテリアとしての美しさと実用性を両立させた、ちょっと特別なライトです。`,
   },
+  {
+    path: "/material/jumbubble_plan",
+    img: ImagesRoute.pexels_thevibrantmachine_3066867,
+    log: ImagesRoute.jumbubblelogo,
+    gradient: "from-[#000000] to-[#545454]",
+    title: "JumBubble-Dayoff",
+    subtitle: "みんなが主体的に音楽を",
+    stack: "発表資料",
+    explain: `JamBubble（ジャムバブル）は、
+「車内」「部屋」「カフェ」など、同じ空間にいるみんなでリアルタイムに音楽を作り上げるためのアプリです。
+
+ホスト（音楽を流す端末）が部屋を作り、QRコードやリンクを共有。
+参加者はアカウント登録なしでアクセスして、自分の好きな曲をリクエストとして追加できます。
+
+曲は順番にホストの端末で再生され、
+まるで“その場の空気を全員で奏でている”ような体験を生み出します。`,
+  },
 ];

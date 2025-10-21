@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import AnimatedRouteSet from "./AnimatedRouteSet";
 import LoadingScreen from "../pages/LoadingScreen";
 import ProductionRoutes from "./ProductionRoutes";
+import MaterialRoutes from "./MaterialRoutes";
 
 import HomePage from "../pages/HomePage";
 import NotFound from "../pages/404";
@@ -41,8 +42,6 @@ const routeList = [
   { path: "/hook/hookview", element: <HookView /> },
 
   { path: "/material/researchma", element: <ReserchMa /> },
-
-  { path: "/material/dawn-wander", element: <Dawn_wander /> },
 ];
 
 const AssemblyRoutes = () => {
@@ -70,6 +69,7 @@ const AssemblyRoutes = () => {
             />
           ))}
           <Route path="/product/*" element={<ProductionRoutes />} />
+          <Route path="/material/*" element={<MaterialRoutes />} />
         </Routes>
       )}
     </AnimatePresence>

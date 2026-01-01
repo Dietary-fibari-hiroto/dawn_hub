@@ -57,6 +57,31 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className="w-full py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="bg-white rounded-2xl shadow-sm border border-neutral-200 p-8">
+            <p className="text-sm tracking-wide text-neutral-500 mb-3">
+              お知らせ
+            </p>
+
+            <h2 className="text-2xl font-semibold text-neutral-900 mb-4">
+              サーバー環境を Microsoft Azure へ移行しました
+            </h2>
+
+            <div className="h-px bg-neutral-200 mb-6" />
+
+            <p className="text-neutral-700 leading-relaxed">
+              このたび、より安定した運用と拡張性向上 + 勉強のため、
+              これまで利用していた「さくらのVPS」から Microsoft Azure
+              へサーバー環境を移行しました。
+              <br />
+              <br />
+              引き続き、応援よろしくお願いいたします。
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="flex-all-center flex-col space-y-[30px]">
         <div className="text-center">
           <p
@@ -76,12 +101,32 @@ const HomePage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-        <Shield
-          img={ImagesRoute.sangira_icon}
-          title="Dawn-Sangria"
-          explain="ワインボトルが光のインテリアに"
-          link="/product/sangria"
-        />
+        <div className="w-[100%] px-[10px] box-border overflow-x-scroll flex space-x-[30px] justify-start ">
+          <Shield
+            img={ImagesRoute.duskOwl_flaing}
+            title="Dawn-DuckShift"
+            explain="見守って、整えて、届けるシフト"
+            link="https://www.duskshift.dawn-waiting.com"
+          />
+          <Shield
+            img={ImagesRoute.IMG_0168}
+            title="日々写真館"
+            explain="お写真ポートフォリオ"
+            link="https://hibi.dawn-waiting.com"
+          />
+          <Shield
+            img={ImagesRoute.sangira_icon}
+            title="Dawn-Rumos"
+            explain="変わらぬ日々に魔法をかけて。"
+            link="https://rumos.dawn-waiting.com"
+          />{" "}
+          <Shield
+            img={ImagesRoute.jumbubblelogo}
+            title="Jambubble"
+            explain="動的プレイリストをみんなで"
+            link="https://dawn-waiting.com/material/jumbubble_plan"
+          />
+        </div>
       </section>
       <section className="relative KinutaShinStdN6K w-full h-[300lvh] ">
         <div

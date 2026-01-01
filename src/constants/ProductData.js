@@ -91,7 +91,35 @@ export const ProductData = [
     explain: "",
   },
   {
-    path: "/product/sangria",
+    path: "/material/jumbubble_plan",
+    img: ImagesRoute.pexels_thevibrantmachine_3066867,
+    log: ImagesRoute.jumbubblelogo,
+    gradient: "from-[#000000] to-[#BC78FF]",
+    title: "JumBubble-Dayoff",
+    subtitle: "みんなが主体的に音楽を",
+    stack: "発表資料",
+    explain: `JamBubble（ジャムバブル）は、
+「車内」「部屋」「カフェ」など、同じ空間にいるみんなでリアルタイムに音楽を作り上げるためのアプリです。
+
+ホスト（音楽を流す端末）が部屋を作り、QRコードやリンクを共有。
+参加者はアカウント登録なしでアクセスして、自分の好きな曲をリクエストとして追加できます。
+
+曲は順番にホストの端末で再生され、
+まるで“その場の空気を全員で奏でている”ような体験を生み出します。`,
+  },
+  {
+    path: "/product/outfit/new",
+    img: ImagesRoute.manamisky,
+    log: ImagesRoute.outfitw,
+    gradient: "from-[#4198CD] to-[#C1CDED]",
+    title: "OUTFIT",
+    subtitle: "失敗しない服選び。",
+    stack: "Webアプリケーション",
+    explain:
+      "「この服、サイズ感合うかな？」そんな不安にさようなら。体型やサイズをリアルに再現したマネキンが、試着イメージをわかりやすく表示。オンラインショッピングをもっと便利に、もっと楽しく！",
+  },
+  {
+    path: "https://rumos.dawn-waiting.com/product/sangria/",
     img: ImagesRoute.sangria_phooto_3,
     log: ImagesRoute.sangira_icon,
     gradient: "from-[#000000] to-[#545454]",
@@ -107,20 +135,36 @@ windowsソフトウェア「Dawn-rumos」から操作でき、光の色や明る
 Dawn-Sangriaは、インテリアとしての美しさと実用性を両立させた、ちょっと特別なライトです。`,
   },
   {
-    path: "/material/jumbubble_plan",
-    img: ImagesRoute.pexels_thevibrantmachine_3066867,
-    log: ImagesRoute.jumbubblelogo,
-    gradient: "from-[#000000] to-[#545454]",
-    title: "JumBubble-Dayoff",
-    subtitle: "みんなが主体的に音楽を",
-    stack: "発表資料",
-    explain: `JamBubble（ジャムバブル）は、
-「車内」「部屋」「カフェ」など、同じ空間にいるみんなでリアルタイムに音楽を作り上げるためのアプリです。
-
-ホスト（音楽を流す端末）が部屋を作り、QRコードやリンクを共有。
-参加者はアカウント登録なしでアクセスして、自分の好きな曲をリクエストとして追加できます。
-
-曲は順番にホストの端末で再生され、
-まるで“その場の空気を全員で奏でている”ような体験を生み出します。`,
+    path: "https://rumos.dawn-waiting.com",
+    img: ImagesRoute.IMG_7120,
+    log: ImagesRoute.IMG_7112,
+    gradient: "from-[#000000] to-[#BC78FF]",
+    title: "Rumos",
+    subtitle: "変わらぬ日々に魔法をかけて。",
+    stack: "IoT/マルチプラットフォームアプリ/API",
+    explain:
+      "DawnRumosはもう使わなくなった雑貨から、いつもそばにある日用品、さらには家具に至るまであらゆるモノをライトインテリアとして再生し、それらをスマートかつ美しくコントロール。部屋に散らばる光のデバイスを一括で操り、空間全体の世界観そのものを切り替える“雰囲気演出プラットフォーム”です。",
+  },
+  {
+    path: "https://hibi.dawn-waiting.com",
+    img: ImagesRoute.IMG_2839,
+    log: ImagesRoute.IMG_0168,
+    gradient: "from-[#000000] to-[#BC78FF]",
+    title: "日々写真館",
+    subtitle: "お写真ポートフォリオ",
+    stack: "Webサイト",
+    explain: "お写真ポートフォリオ",
+  },
+  {
+    path: "https:/www.duskshift.dawn-waiting.com",
+    img: ImagesRoute.manamisorami1,
+    log: ImagesRoute.duskOwl_flaing,
+    gradient: "from-[#000000] to-[#BC78FF]",
+    title: "DuskShift",
+    subtitle: "見守って、整えて、届けるシフト",
+    stack: "Webサイト/Webアプリ",
+    explain: `夜の時間を見守るフクロウのように、
+無理なく、やさしく。
+働く人のリズムに寄り添うシフト募集を`,
   },
 ];

@@ -8,6 +8,9 @@ const Header = () => {
         <img className="size-[50px]" src={ImagesRoute.dawn_cat} alt="" />
       </Link>
       <ul className=" KinutaShinStdN6K tracking-[5px] h-[60px]  flex justify-between items-center px-[20px] space-x-[30px]">
+        <Link className="shootingstar-rightline " to="/">
+          Home
+        </Link>
         <Link className="shootingstar-rightline " to="/profile">
           Profile
         </Link>

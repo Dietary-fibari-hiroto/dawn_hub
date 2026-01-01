@@ -50,6 +50,16 @@ const ImagesRoute = {
   arrow: require("./images/arrow.png"),
   IMG_1417: require("./images/IMG_1417.jpg"),
 
+  IMG_7112: require("./images/photos/IMG_7112.jpg"),
+  IMG_7157: require("./images/photos/IMG_7157.jpg"),
+  IMG_7169: require("./images/photos/IMG_7169.jpg"),
+  IMG_7174: require("./images/photos/IMG_7111.jpg"),
+  IMG_7146: require("./images/photos/IMG_7146.jpg"),
+
+  IMG_7120: require("./images/photos/IMG_7120.jpg"),
+  IMG_7182: require("./images/photos/IMG_7182.jpg"),
+  IMG_7185: require("./images/photos/IMG_7185.jpg"),
+
   netmaui: require("./images/.netmaui.png"),
   csharp: require("./images/cs.png"),
   cpp: require("./images/cpp.png"),
@@ -99,7 +109,7 @@ const ImagesRoute = {
   fonts: require("./images/materials/adobefonts.png"),
   adobeexpress: require("./images/materials/adobeexpress.png"),
   IMG_7009: require("./images/IMG_7009-Enhanced-NR.jpg"),
-  IMG_7017: require("./images/IMG_7017.jpg"),
+  IMG_7017: require("./images/photos/IMG_7017.jpg"),
   IMG_7018: require("./images/IMG_7018.jpg"),
   IMG_7033: require("./images/IMG_7033.jpg"),
   IMG_7034: require("./images/IMG_7034.jpg"),
@@ -181,6 +191,9 @@ const ImagesRoute = {
   sangria_phooto_7: require("./images/photos/sangria_phooto-7.jpg"),
   sangria_phooto_8: require("./images/photos/sangria_phooto-8.jpg"),
 
+  duskOwl_flaing: require("./images/photos/DuskOwl_flaing.png"),
+  IMG_0168: require("./images/photos/IMG_0168.jpg"),
+
   //Dayoff素材
   carnav_photo: require("./images/materials/carnav_photo.png"),
   dayoff_tecnorogy: require("./images/materials/dayoff_tecnorogy.png"),
@@ -194,6 +207,9 @@ const ImagesRoute = {
   ruizi_2: require("./images/materials/ruizi_2.png"),
   ruizi_3: require("./images/materials/ruizi_3.jpg"),
   example_dayoff: require("./images/materials/example_dayoff.png"),
+
+  download_icon: require("./images/icons/download.png"),
+  screen_share: require("./images/icons/screen-share.png"),
 };
 
 export default ImagesRoute;

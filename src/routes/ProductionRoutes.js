@@ -1,11 +1,12 @@
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AnimatedRouteSet from "./AnimatedRouteSet";
-import { Sangria, Write } from "../pages/products";
+import { Sangria, Write, Outfit } from "../pages/products";
 import Footer from "../components/Footer";
 const RouteList = [
   { path: "/write", element: <Write /> },
   { path: "/sangria", element: <Sangria /> },
+  { path: "/outfit/new", element: <Outfit /> },
 ];
 const ProductionRoutes = () => {
   const location = useLocation();

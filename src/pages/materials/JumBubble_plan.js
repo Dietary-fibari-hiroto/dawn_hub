@@ -40,8 +40,8 @@ const Mokuzi = (items) => {
 const JumBubble_plan = () => {
   const { animationOpacityStyle } = UseOpacityAnimation();
   return (
-    <div>
-      <section className="relative section-frame flex justify-center items-center space-x-[10px]">
+    <div className="w-[100vw] overflow-x-hidden">
+      <section className="relative section-frame flex justify-center items-center space-x-[10px] overflow-y-hidden">
         <div className="flex items-center justify-center overflow-hidden">
           <div className="flex items-center justify-center">
             <motion.h1

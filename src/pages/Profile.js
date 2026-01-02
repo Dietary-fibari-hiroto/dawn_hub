@@ -97,7 +97,7 @@ const Profile = () => {
     setCircleValue2(result);
   }, [scrollValue2]);
   return (
-    <div className="kinuta-maruminfuji-stdn">
+    <div className="kinuta-maruminfuji-stdn w-[100vw] overflow-x-hidden">
       <Header />
       <section
         className="section-frame sticky top-0 z-[-1]"

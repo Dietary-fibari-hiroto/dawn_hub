@@ -156,7 +156,7 @@ Dawn-Sangriaは、インテリアとしての美しさと実用性を両立さ�
     explain: "お写真ポートフォリオ",
   },
   {
-    path: "https:/www.duskshift.dawn-waiting.com",
+    path: "https://www.duskshift.dawn-waiting.com",
     img: ImagesRoute.manamisorami1,
     log: ImagesRoute.duskOwl_flaing,
     gradient: "from-[#000000] to-[#BC78FF]",

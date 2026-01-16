@@ -82,7 +82,7 @@ const sintilyokuOb = [
   },
 ];
 
-const Dawn_wander = () => {
+export const DawnWander = () => {
   const { animationOpacityStyle } = UseOpacityAnimation();
 
   const step = useInElementScrollAnimation("my-target");
@@ -119,17 +119,17 @@ const Dawn_wander = () => {
   };
 
   return (
-    <div className="kinuta-maruminfuji-stdn bg-black">
+    <div className="kinuta-maruminfuji-stdn bg-black ">
       {showDialog && (
         <motion.div
           onClick={() => {
             setShowDialog((prev) => !prev);
           }}
-          className="sticky top-0 left-0 z-[50] bg-black section-frame flex items-center justify-evenly"
+          className="sticky top-0 left-0 z-[50] bg-black section-frame flex items-center justify-evenly "
         >
           <figure className="flex-all-center space-y-[100px]">
-            <img className="w-[800px]" src={ImagesRoute.guid} />
-            <img className="w-[800px]" src={ImagesRoute.guid2} />
+            <img className="w-[800px]" src={ImagesRoute.guid} alt="" />
+            <img className="w-[800px]" src={ImagesRoute.guid2} alt="" />
           </figure>
           <div className="space-y-[100px]">
             <p className="string-sm">
@@ -147,16 +147,17 @@ const Dawn_wander = () => {
           </div>
         </motion.div>
       )}
-      <section className="relative section-frame">
+      <section className="relative section-frame ">
         {" "}
         <video
           muted
           loop
           autoPlay
-          className="absolute top-0 left-0 section-frame z-[1]"
+          playsinline
+          className="absolute top-0 left-0 section-frame z-[1] "
           src={HomeVideo}
         />
-        <div className="section-frame absolute top-0 left-0 z-[3] flex items-center justify-evenly">
+        <div className="section-frame absolute top-0 left-0 z-[3] flex max-md:flex-col  items-center justify-evenly">
           <div className="floating  flex-all-center flex-col tracking-[15px]">
             <motion.p
               {...blurFadeIn}
@@ -168,7 +169,7 @@ const Dawn_wander = () => {
               Wander
             </motion.p>
           </div>
-          <div className="glitch-wrapper relative w-[651px] h-[151px] flex-all-center">
+          <div className="glitch-wrapper relative w-[40rem] h-[151px] flex-all-center">
             <div className="overflow-hidden absolute top-0 left-0 string-m">
               <motion.p {...delayedFadeSlideIn} transition={{ delay: 1 }}>
                 アニメーションによる
@@ -193,7 +194,7 @@ const Dawn_wander = () => {
         </div>
         <div className="string-sm text-center absolute bottom-[5%] left-1/2 translate-x-[-50%] z-[5]">
           <p className="string-sm">SK3A 小野寺広登</p>
-          <p className="string-ss">内山、吉原ゼミ</p>
+          <p className="string-ss">内山、良原ゼミ</p>
           <p className="string-ss">前期最終発表プレゼン資料</p>
         </div>
         <button
@@ -205,7 +206,7 @@ const Dawn_wander = () => {
           資料UIが崩れている方はこちら
         </button>
       </section>
-      <section className="relative w-screen h-[200lvh]">
+      <section className="relative h-[200lvh] w-[100vw] overflow-x-hidden">
         <SectionTitle
           className={`absolute top-0 left-0 opacity-section ${animationOpacityStyle}`}
           index="00"
@@ -300,18 +301,22 @@ const Dawn_wander = () => {
         <img
           src={ImagesRoute.IMG_7050}
           className={`opacity-section ${animationOpacityStyle}  tracked-element w-[300px] h-[200px] absolute left-[63%] top-[15%] z-[5]`}
+          alt=""
         />
         <img
           src={ImagesRoute.IMG_7034}
           className={`opacity-section ${animationOpacityStyle}  tracked-element3 w-[300px] h-[200px] absolute left-[15%] top-[33%] z-[5]`}
+          alt=""
         />
         <img
           src={ImagesRoute.IMG_7065}
           className={`opacity-section ${animationOpacityStyle} tracked-element2 w-[200px] h-[300px] absolute left-[35%] top-[45%] z-[5]`}
+          alt=""
         />
         <img
           src={ImagesRoute.IMG_7068}
           className={`opacity-section ${animationOpacityStyle} tracked-element w-[200px] h-[300px] absolute left-[58%] top-[68%] z-[5]`}
+          alt=""
         />
       </section>
       <section className="section-frame flex-all-center relative">
@@ -417,7 +422,7 @@ const Dawn_wander = () => {
       </section>
       <section>
         <SectionTitle index="02" title="技術スタック" english="Tech Stack" />
-        <img className="w-full" src={ImagesRoute.dawn_wander_tec} />
+        <img className="w-full" src={ImagesRoute.dawn_wander_tec} alt="" />
       </section>
       <section className="section-frame flex flex-col justify-evenly">
         <div className="flex items-center justify-evenly w-full">
@@ -679,13 +684,13 @@ const Dawn_wander = () => {
           <div>
             {" "}
             <p className="string-rg p-[100px]">・従来のWebサイト</p>
-            <img src={ImagesRoute.material_spa} className="w-[500px]" />
+            <img src={ImagesRoute.material_spa} className="w-[500px]" alt="" />
             <p className="text-center string-rg">HTMLファイルごと交換</p>
           </div>
           <div>
             {" "}
             <p className="string-rg p-[100px]">・SPA</p>
-            <img src={ImagesRoute.material_web} className="w-[500px]" />
+            <img src={ImagesRoute.material_web} className="w-[500px]" alt="" />
             <p className="text-center string-rg">
               内部DOM(HTMLタグ)だけ交換
               <br />
@@ -694,7 +699,11 @@ const Dawn_wander = () => {
           </div>{" "}
         </div>
         <div className="flex justify-evenly otems-center mt-[100px]">
-          <img className="size-[200px]" src={ImagesRoute.framer_motion} />
+          <img
+            className="size-[200px]"
+            src={ImagesRoute.framer_motion}
+            alt=""
+          />
           <div className="pl-[100px] space-y-[10px]">
             <p className="string-rg mr-[100px]">・Framer-motionとは...</p>
             <p className="text-support-line-l string-s leading-[30px] ml-[100px]">
@@ -791,44 +800,53 @@ const Dawn_wander = () => {
             <img
               className={`opacity-section ${animationOpacityStyle} tracked-element3 img-custom-box-vertical absolute top-[10%] right-[40%]`}
               src={ImagesRoute.dining_table_7782610_1920}
+              alt=""
             />
             <img
               className="tracked-element img-custom-box-horizontal absolute top-[40%] right-[5%]"
               src={ImagesRoute.hermes_rivera_aK6WGqxyHFw_unsplash}
+              alt=""
             />
             <img
               className="tracked-element2 img-custom-box-horizontal absolute bottom-[10%] right-[20%]"
               src={ImagesRoute.t_ed_hOgog7l_iuY_unsplash}
+              alt=""
             />
           </section>
           <section className="w-screen h-[200lvh] relative">
             <img
               className="tracked-element3 img-custom-box-vertical absolute top-[10%] right-[10%]"
               src={ImagesRoute.p465072607_1461049087899559_588075790240556776_n}
+              alt=""
             />
             <img
               className="tracked-element img-custom-box-horizontal absolute top-[40%] right-[35%]"
               src={ImagesRoute.p465523955_568969585623225_5011903062634586769_n}
+              alt=""
             />
             <img
               className="tracked-element2 img-custom-box-horizontal absolute bottom-[10%] right-[20%]"
               src={
                 ImagesRoute.p465189818_3939773542908699_8873408741192309513_n
               }
+              alt=""
             />
           </section>
           <section className="w-screen h-[200lvh] relative">
             <img
               className="tracked-element3 img-custom-box-vertical absolute top-[10%] right-[40%]"
               src={ImagesRoute.IMG_2882}
+              alt=""
             />
             <img
               className="tracked-element img-custom-box-horizontal absolute top-[40%] right-[5%]"
               src={ImagesRoute.IMG_8332}
+              alt=""
             />
             <img
               className="tracked-element2 img-custom-box-horizontal absolute bottom-[10%] right-[20%]"
               src={ImagesRoute.IMG_7856}
+              alt=""
             />
           </section>
         </div>
@@ -857,6 +875,7 @@ const Dawn_wander = () => {
           <img
             className="bg-white rounded-[50%]"
             src={ImagesRoute.github_icon}
+            alt=""
           />
           <p className="string-rg">Dietary-fibari-hiroto</p>
           <p>https://github.com/Dietary-fibari-hiroto</p>
@@ -865,4 +884,3 @@ const Dawn_wander = () => {
     </div>
   );
 };
-export default Dawn_wander;

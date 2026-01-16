@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
       </section>
       <section className="shootingstar-underline bg-[#0D081A] h-[50px] w-full flex-all-center kinuta-maruminfuji-stdn string-s2">
-        Copyright 2025 - Dawn. All Rights Reserved.
+        Copyright 2024 - Dawn. All Rights Reserved.
       </section>
     </div>
   );

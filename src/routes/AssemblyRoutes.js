@@ -20,7 +20,6 @@ import Logis from "../pages/Logis";
 import HookView from "../pages/HookView";
 import ChronoDawn from "../pages/functions/Chronodawn";
 import ReserchMa from "../pages/materials/ResearchMa";
-import Dawn_wander from "../pages/materials/Dawn_wander";
 import ResponsiveAlert from "../pages/ResponsiveAlert";
 import { AudioRoutine } from "../pages";
 
@@ -50,7 +49,7 @@ const AssemblyRoutes = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setIsLoading(false);
     }, 3000);
   }, []);

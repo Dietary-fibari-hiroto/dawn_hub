@@ -19,7 +19,7 @@ const HomePage = () => {
   useScrollParallax(".tracked-element3", 0.3);
 
   return (
-    <div className="home-bg KinutaShinStdN48K text-white w-[100vw] overflow-x-hidden">
+    <div className="home-bg  text-white w-[100vw] overflow-x-hidden">
       {/**本文 */}
 
       <section className="relative">
@@ -58,14 +58,19 @@ const HomePage = () => {
         </div>
       </section>
       <section className="w-full py-16">
-        <div className="max-w-3xl mx-auto px-6">
+        <a
+          href="https://new.dawn-waiting.com"
+          className="max-w-3xl mx-auto px-6 block"
+        >
           <div className="bg-white rounded-2xl shadow-sm border border-neutral-200 p-8">
             <p className="text-sm tracking-wide text-neutral-500 mb-3">
               お知らせ
             </p>
 
             <h2 className="text-2xl font-semibold text-neutral-900 mb-4">
-              サーバー環境を Microsoft Azure へ移行しました
+              サーバー環境を Microsoft Azure へ移行し、
+              <br />
+              それに伴い、ポートフォリオも新しくしました。
             </h2>
 
             <div className="h-px bg-neutral-200 mb-6" />
@@ -73,13 +78,14 @@ const HomePage = () => {
             <p className="text-neutral-700 leading-relaxed">
               このたび、より安定した運用と拡張性向上 + 勉強のため、
               これまで利用していた「さくらのVPS」から Microsoft Azure
-              へサーバー環境を移行しました。
+              へサーバー環境を移行し、それに伴いポートフォリオサイトも新しく作成しました。
+              サイトへは、この要素をクリックすることで閲覧することができます。
               <br />
               <br />
               引き続き、応援よろしくお願いいたします。
             </p>
           </div>
-        </div>
+        </a>
       </section>
 
       <section className="flex-all-center flex-col space-y-[30px]">
@@ -124,7 +130,7 @@ const HomePage = () => {
             img={ImagesRoute.jumbubblelogo}
             title="Jambubble"
             explain="動的プレイリストをみんなで"
-            link="https://dawn-waiting.com/material/jumbubble_plan"
+            link="https://jambubble.dawn-waiting.com"
           />
         </div>
       </section>
@@ -138,14 +144,17 @@ const HomePage = () => {
         <img
           className={`tracked-element bluer-img-hover opacity-section ${animationOpacityStyle} absolute z-[2] top-[7%] left-[32%] img-custom-box-vertical `}
           src={ImagesRoute.IMG_7041}
+          alt=""
         />
         <img
           className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[64%] max-sm:left-[50%] top-[30%] img-custom-box-horizontal z-[2]`}
           src={ImagesRoute.IMG_7038}
+          alt=""
         />
         <img
           className={`opacity-section ${animationOpacityStyle} absolute z-[3] left-[47%] top-[41%] img-custom-box-vertical`}
           src={ImagesRoute.IMG_7018}
+          alt=""
         />
         <div
           className={`tracked-element3 opacity-section ${animationOpacityStyle} absolute top-[22%] left-[55%] z-[0] size-[300px] border border-[#6F3AFF]`}
@@ -183,10 +192,12 @@ const HomePage = () => {
         <img
           className={`tracked-element opacity-section ${animationOpacityStyle} absolute img-custom-box-vertical left-[8%] top-[57%]`}
           src={ImagesRoute.IMG_152}
+          alt=""
         />
         <img
           className={`tracked-element2 opacity-section ${animationOpacityStyle} absolute left-[27%] top-[72%] z-[3] img-custom-box-vertical`}
           src={ImagesRoute.IMG_7017}
+          alt=""
         />
         <p
           className={`opacity-section ${animationOpacityStyle} kinuta-maruminfuji-stdn absolute left-[65%] top-[75%] z-[5] string-ss leading-[30px] max-sm:left-[20%] max-sm:bg-[#00000066]`}

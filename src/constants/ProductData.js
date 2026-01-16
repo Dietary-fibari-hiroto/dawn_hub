@@ -167,4 +167,14 @@ Dawn-Sangriaは、インテリアとしての美しさと実用性を両立さ�
 無理なく、やさしく。
 働く人のリズムに寄り添うシフト募集を`,
   },
+  {
+    path: "/material/rumos",
+    img: ImagesRoute.sangria_phooto_1,
+    log: ImagesRoute.sangria_phooto_4,
+    gradient: "from-[#000000] to-[#BC78FF]",
+    title: "Rumos発表資料",
+    subtitle: "変わらぬ日々に魔法をかけて",
+    stack: "発表資料",
+    explain: `発表資料`,
+  },
 ];

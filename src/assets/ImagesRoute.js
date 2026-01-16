@@ -59,6 +59,8 @@ const ImagesRoute = {
   IMG_7120: require("./images/photos/IMG_7120.jpg"),
   IMG_7182: require("./images/photos/IMG_7182.jpg"),
   IMG_7185: require("./images/photos/IMG_7185.jpg"),
+  IMG_7391: require("./images/photos/IMG_7391.jpg"),
+  IMG_7398: require("./images/photos/IMG_7398.jpg"),
 
   netmaui: require("./images/.netmaui.png"),
   csharp: require("./images/cs.png"),

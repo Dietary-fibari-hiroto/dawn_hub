@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ImagesRoute from "../../assets/ImagesRoute";
 import UseOpacityAnimation from "../../hooks/UseOpacityAnimation";
 
@@ -37,7 +37,7 @@ const Mokuzi = (items) => {
   );
 };
 
-const JumBubble_plan = () => {
+export const JumBubblePlan = () => {
   const { animationOpacityStyle } = UseOpacityAnimation();
   return (
     <div className="w-[100vw] overflow-x-hidden">
@@ -77,6 +77,7 @@ const JumBubble_plan = () => {
         <img
           src={ImagesRoute.night_view}
           className="absolute section-frame top-0 left-0 z-[-2] opacity-[0.8]"
+          alt=""
         />
       </section>
       <section className="section-frame relative flex-all-center ">
@@ -120,7 +121,7 @@ const JumBubble_plan = () => {
               explain="どのような技術を用いるか"
             />{" "}
             <Mokuzi number="10" title="まとめ" />
-            <img className="p-[100px]" src={ImagesRoute.bubble} />
+            <img className="p-[100px]" src={ImagesRoute.bubble} alt="" />
           </div>
         </div>
       </section>
@@ -134,7 +135,7 @@ const JumBubble_plan = () => {
         <figure
           className={`w-[300px] opacity-section ${animationOpacityStyle}`}
         >
-          <img src={ImagesRoute.DayoffWhiteLogo} />
+          <img src={ImagesRoute.DayoffWhiteLogo} alt="" />
         </figure>
         <div className="max-w-[600px] space-y-[50px]">
           <p>意味:休日</p>
@@ -189,6 +190,7 @@ const JumBubble_plan = () => {
           <img
             className={`opacity-section ${animationOpacityStyle}`}
             src={ImagesRoute.carnav_photo}
+            alt=""
           />
         </figure>
       </section>
@@ -322,7 +324,7 @@ const JumBubble_plan = () => {
             そのものではなく、一意に識別できる「ID」等です。
           </p>
           <figure className="w-[600px]">
-            <img src={ImagesRoute.example_dayoff} />
+            <img src={ImagesRoute.example_dayoff} alt="" />
           </figure>
         </div>
       </section>
@@ -334,7 +336,7 @@ const JumBubble_plan = () => {
           explain="主要機能とは別のユースケース"
         />{" "}
         <figure className="w-[500px]">
-          <img src={ImagesRoute.example_dayoff2} />
+          <img src={ImagesRoute.example_dayoff2} alt="" />
         </figure>{" "}
         <p className="string-sm">
           アプリを持っているホストが何人かいれば、
@@ -457,14 +459,17 @@ const JumBubble_plan = () => {
         <img
           className="absolute z-[-1] top-[10%] right-[0%] w-[500px] opacity-[0.5]"
           src={ImagesRoute.ruizi_1}
+          alt=""
         />
         <img
           className="absolute z-[-1] bottom-[10%] right-[20%] w-[500px]  opacity-[0.5]"
           src={ImagesRoute.ruizi_2}
+          alt=""
         />
         <img
           className="absolute z-[-1] top-[40%] right-[10%] w-[500px]  opacity-[0.5]"
           src={ImagesRoute.ruizi_3}
+          alt=""
         />
       </section>
       <section className="relative section-frame flex-all-center">
@@ -474,7 +479,7 @@ const JumBubble_plan = () => {
           title="技術スタック"
           explain="どのような技術を用いるか"
         />
-        <img className="h-[70vh]" src={ImagesRoute.dayoff_tecnorogy} />
+        <img className="h-[70vh]" src={ImagesRoute.dayoff_tecnorogy} alt="" />
       </section>
       <section className="relative section-frame flex-all-center">
         <Mokuzi absolute={true} number="10" title="まとめ" />
@@ -483,5 +488,3 @@ const JumBubble_plan = () => {
     </div>
   );
 };
-
-export default JumBubble_plan;
